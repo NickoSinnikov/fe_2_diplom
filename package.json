@@ -21,8 +21,12 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
-  },
+    ],
+    "rules": {
+      
+      "react/jsx-uses-react": "off",
+      "react/react-in-jsx-scope": "off"
+  }},
   "browserslist": {
     "production": [
       ">0.2%",
@@ -34,5 +38,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^8.33.0",
+    "eslint-plugin-react": "^7.32.2"
   }
 }
