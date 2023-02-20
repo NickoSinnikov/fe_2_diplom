@@ -1,4 +1,4 @@
-import logo from './img/logo.svg';
+import Logo from './components/Logo';
 import './App.css';
 import './css/header.css';
 import './css/main-section.css';
@@ -7,51 +7,12 @@ import firstImg from './img/working-list__first.svg';
 import secondImg from './img/working-list__second.svg';
 import thirdImg from './img/working-list__third.svg';
 
+import Header from './components/Header';
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <div className="header__logo container">
-          <img src={logo} className="App-logo" alt="logo" />
-        </div>
-        <div className="header__menu">
-          <ul className="menu__list container">
-            <li className="menu__item">
-              <a href="#about">О нас</a>
-            </li>
-            <li className="menu__item">Как это работает</li>
-            <li className="menu__item">Отзывы</li>
-            <li className="menu__item">Контакты</li>
-          </ul>
-        </div>
-        <div className="header__block container">
-          <h1 className="header__title">
-            Вся жизнь -
-            <span className="header__title-bold">
-              <br />
-              путешествие!
-            </span>
-          </h1>
-          <form className="search__form">
-            <div className="form-block">
-              <label className="form__lable">Направление</label>
-              <div className="input-block">
-                <input className="form__input" />
-                <button className="btn-swap">Swap</button>
-                <input className="form__input" />
-              </div>
-            </div>
-            <div className="form-block">
-              <label className="form__lable">Дата</label>
-              <div className="input-block">
-                <input className="form__input" />
-                <input className="form__input" />
-              </div>
-            </div>
-            <button className="header__btn">Найти билеты</button>
-          </form>
-        </div>
-      </header>
+      <Header/>
       <main className="main">
         <section id="about" className="section-about">
           <div className="container section__container">
@@ -75,7 +36,7 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="section__working">
+        <section id="working" className="section__working">
           <div className="container working__container">
             <div className="section__header">
               <h2 className="section__title section__title-white">
@@ -108,7 +69,7 @@ function App() {
             </ul>
           </div>
         </section>
-        <section className="section__reviews">
+        <section id="reviews" className="section__reviews">
           <div className="container">
             <h2 className="section__title">Отзывы</h2>
             <ul className="reviews">
@@ -155,7 +116,7 @@ function App() {
       <footer className="footer">
         <div className="container footer__container">
           <div className="footer__contacts">
-            <div className="contacts__section">
+            <div id="contacts" className="contacts__section">
               <h4 className="footer__title">Свяжитесь с нами</h4>
               <ul className="contacts__list">
                 <li className="contact">
@@ -209,7 +170,7 @@ function App() {
         </div>
         <div className="footer__footer">
           <div className="container footer__logo">
-            <img src={logo} />
+            <Logo/>
             <div className="arrow" />
 
             <div className="terms">2018 WEB</div>
