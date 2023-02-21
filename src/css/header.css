@@ -50,7 +50,7 @@
 }
 
 /* Search form*/
-.search__form{
+.header__form{
 	display: flex;
 	flex-direction: column;
 

@@ -33,21 +33,7 @@ export default function Header() {
           </span>
         </h1>
         <form className="search__form">
-          <div className="form-block">
-            <label className="form__lable">Направление</label>
-            <div className="input-block">
-              <input className="form__input" />
-              <button className="btn-swap">Swap</button>
-              <input className="form__input" />
-            </div>
-          </div>
-          <div className="form-block">
-            <label className="form__lable">Дата</label>
-            <div className="input-block">
-              <input className="form__input" />
-              <input className="form__input" />
-            </div>
-          </div>
+         
           <button className="header__btn">Найти билеты</button>
         </form>
       </div>
