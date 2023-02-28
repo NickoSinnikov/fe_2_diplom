@@ -1,5 +1,6 @@
 import React from "react";
-import swap from "../img/swap.swg";
+import swap from "../img/Swap.svg";
+
 export default function Swap(){
     return(
         <button className="btn__swap">

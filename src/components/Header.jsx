@@ -1,6 +1,9 @@
 import React from "react";
 import MenuItem from './MenuItem';
 import Logo from "./Logo";
+import HeaderFormDirection from "./HeaderFormDirection";
+import HeaderFormDate from "./HeaderFormDate";
+import Button from "./Button";
 
 export default function Header() {
   return (
@@ -33,8 +36,9 @@ export default function Header() {
           </span>
         </h1>
         <form className="search__form">
-         
-          <button className="header__btn">Найти билеты</button>
+          <HeaderFormDirection>YНаправление</HeaderFormDirection>
+          <HeaderFormDate>Дата</HeaderFormDate>
+          <Button className="header__btn">Найти билеты</Button>
         </form>
       </div>
     </header>
