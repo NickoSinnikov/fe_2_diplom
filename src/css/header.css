@@ -1,7 +1,7 @@
 .App-header {
   width: 100%;
-  height: 100vh;
-  background-image: url(../img/bg-header.png);
+  
+  
   background-position: center;
 }
 
@@ -25,6 +25,10 @@
 
 .menu__item {
   margin-right: 84px;
+  
+}
+.menu__item a{
+  color: white;
 }
 
 .header__title {
@@ -38,8 +42,7 @@
 }
 
 .header__block {
-  margin-top: 200px;
-  display: flex;
+  
 }
 
 .header__title {
