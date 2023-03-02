@@ -28,11 +28,17 @@ button{
 }
 .container{
   width: 1112px;
-  margin: auto;
+  margin: 0 auto 0 auto;
 }
-.App{
+.main{
   display: flex;
   flex-direction: column;
   width: 100%;
+z-index: 0;
+ 
 }
 
+.App{
+  display: flex;
+  flex-direction: column;
+}

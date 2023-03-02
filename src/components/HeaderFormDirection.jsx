@@ -7,11 +7,11 @@ import Swap from "./Swap";
 export default function HeaderFormDirection(props){
     return (
       <div className="form__blockDirection">
-        <Label className="form__lable">Направление</Label>
+        <Label>Направление</Label>
         <div className="input-block">
-          <Input />
+          <Input placeholder="Откуда"/>
           <Swap/>
-          <Input />
+          <Input placeholder="Куда"/>
         </div>
       </div>
     );

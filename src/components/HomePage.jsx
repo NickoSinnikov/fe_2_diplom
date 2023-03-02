@@ -5,7 +5,7 @@ import HomePageForm from "./HomePageForm";
 
 export default function HomePage(){
     return(
-        <main>
+        <main className="main">
             <HomePageForm/>
             <About/>
             <Faq/>
