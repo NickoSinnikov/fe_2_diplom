@@ -1,15 +1,18 @@
+import { useNavigate } from "react-router";
 
-import {useNavigate} from "react-router";
-import PageForm from "./PageForm";
+import HeaderFormDirection from "./SearchFormDirection";
+import HeaderFormDate from "./SearchFormDate";
+import Button from "./Button";
 
 export default function HomePageForm() {
   const navigate = useNavigate();
 
-  const handleSubmit =(event)=>{
+  const handleSubmit = (event) => {
     event.preventDefault();
     console.log("submit");
-    navigate('/tickets/');
-  }
+    navigate("/tickets/");
+  };
+
   return (
     <section className="home-page-title">
       <div className="home-page-title-block container">
@@ -20,7 +23,15 @@ export default function HomePageForm() {
             путешествие!
           </span>
         </h1>
-        <PageForm className="home-page-form" onSubmit={handleSubmit}/>
+        <form onSubmit={handleSubmit} className="search-form search-form-main">
+          <div className="form-item form-item-column">
+            <HeaderFormDirection>Направление</HeaderFormDirection>
+            <HeaderFormDate>Дата</HeaderFormDate>
+          </div>
+          <Button type="submit" className="btn-search">
+            Найти билеты
+          </Button>
+        </form>
       </div>
     </section>
   );
