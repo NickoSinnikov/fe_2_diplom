@@ -2,6 +2,6 @@ import React from "react";
 
 export default function Button(props){
     return(
-        <button type="button" className={props.className}>{props.children}</button>
+        <button type={props.type} className={props.className}>{props.children}</button>
     )
 }

@@ -34,21 +34,4 @@
   color: white;
 }
 
-.header__title {
-  color: white;
-  font-size: 60px;
-  font-family: 'Roboto-Thin';
-}
-
-.header__title-bold {
-  font-family: 'Roboto-Bold';
-}
-
-
-.header__title {
-  margin: auto;
-  text-align: left;
-  justify-content: center;
-  line-height: 84.3px;
-}
 
