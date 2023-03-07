@@ -1,7 +1,7 @@
-import Input from "./Input";
+import Input from "../Input";
 export default function DateFilter(){
     return (
-        <div className="date-filter">
+        <div className="date-filter aside-item">
             <div className="date-form">
                 <label className="date-form__label">
                     Дата поездки

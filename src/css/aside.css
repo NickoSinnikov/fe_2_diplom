@@ -1,6 +1,49 @@
-.aside{
-    width:300px;
-    height:700px; /*! потом убрать */
+.aside {
+    width: 300px;
+    
+    
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     border-radius: 5px;
+    
+
     background-color: #3E3C41;
+    color: white;
+}
+
+.aside-item{
+    width: 100%;
+    padding: 20px 20px 20px 20px;
+    border-bottom: 1px solid white;
+}
+
+
+.options-filter__item{
+    display: flex;
+    justify-content: left;
+}
+
+.date-form__label{
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.date-form:first-child{
+    margin-bottom: 20px;
+}
+
+.date-form input{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.options-filter__title{
+    font-size: 18px;
+}
+
+.options-filter__item :nth-child(-n+2){
+    margin-right: 20px;
 }

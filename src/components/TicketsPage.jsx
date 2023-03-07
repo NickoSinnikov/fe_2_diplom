@@ -1,4 +1,4 @@
-import Aside from "./Aside";
+import Aside from "./Aside/Aside";
 import Tickets from "./Tickets";
 import "../css/tickets-page.css";
 import SearchFormDirection from "./SearchFormDirection";
