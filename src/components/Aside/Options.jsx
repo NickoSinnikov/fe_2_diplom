@@ -3,8 +3,8 @@ import { useState } from "react";
 export default function Options(props){
 
     const [checked, setState] = useState(false);
-    const handleChange=(checked)=> {
-        setState({ checked });
+    const handleChange=(val)=> {
+        setState(val);
       }
     return(
         <li className="options-filter__item">
