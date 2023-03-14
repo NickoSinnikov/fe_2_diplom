@@ -20,6 +20,7 @@
     border-bottom: 1px solid white;
 }
 
+/** Options filter */
 
 .options-filter__item{
     display: flex;
@@ -48,6 +49,7 @@
     margin-right: 20px;
 }
 
+/** Price filter */
 
 .price-filter{
     width: 100%;
@@ -66,3 +68,50 @@
 
     font-size: 20px;
 }
+
+/* * Date filter */
+
+.time-filter{
+    width: 100%;
+    
+}
+
+.time-filter_header{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.time-filter_button{
+    width:15px;
+    height: 15px;
+    align-self: center;
+    border: 2px solid grey;
+    border-radius: 4px;
+    background-color: inherit;
+
+    color: white;
+    
+    font-size: 18px;
+
+    position: relative;
+}
+
+.time-filter_button p{
+margin: 0;
+   position: absolute;               
+   top: 50%;                         
+   left: 50%;
+   margin-right: -50%;
+   transform: translate(-50%, -50%) }
+
+
+.time-filter_button:hover{
+    border-color: orange;
+}
+
+
+
+.hidden {
+    display: none;
+ }
