@@ -1,15 +1,20 @@
 import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-//import InputRange from 'react-input-range';
+//import { useSelector, useDispatch } from "react-redux";
+
 
 export default function TimeFilter() {
   const [isHidden, setHidden] = useState({
     departure: true,
     arrival: true,
   });
+
+
+  /** Открывание, скрытие блока */
   const onHidden = (name) => {
     setHidden((prev) => ({ ...prev, [name]: !prev[name] }));
   };
+
+
   return (
     <div className="aside-item">
       <div className="time-filter__block">
