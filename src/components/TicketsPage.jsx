@@ -1,8 +1,8 @@
 import Aside from "./Aside/Aside";
 import Tickets from "./Tickets";
 import "../css/tickets-page.css";
-import SearchFormDirection from "./SearchFormDirection";
-import SearchFormDate from "./SearchFormDate";
+import SearchFormDirection from "./Forms/SearchFormDirection";
+import SearchFormDate from "./Forms/SearchFormDate";
 import Button from "./Button";
 
 export default function TicketsPage() {

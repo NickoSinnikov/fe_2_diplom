@@ -1,12 +1,16 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import searchHandleChange from "../../Slice/SearchSlice";
 
-export default function Input(props) {
+export default function InputCities(props) {
   const [value, setValue] = useState("");
   const [visible, setVisible] = useState(false);
   const [cities, setCities] = useState([]);
+  const dispatch = useDispatch();
+  
 
-  useEffect(() => {
+useEffect(() => {
     if (value.length > 0) {
       fetch(
         `https://netology-trainbooking.netoservices.ru/routes/cities?name=${value}`
@@ -21,14 +25,32 @@ export default function Input(props) {
   const handleChange = (event) => {
     const { target } = event;
     setValue(target.value);
+    const citiObj =
+         cities &&
+         cities.find((city) => city.name === target.value.toLowerCase());
+      const id = citiObj ? citiObj._id : '';
+      onHandleChangeDispatch(id, target.value);
   };
 
   const onVisible = (event) => {
     event.preventDefault();
-    setTimeout(() => setVisible(false), 1000);
+    setVisible(false);
+    
   };
 
-  console.log(visible);
+  const onHandleChangeDispatch = (id, city) => {
+    setValue(city);
+    dispatch(
+       searchHandleChange({
+          name: `${props.direction}`,
+          value: {
+             id,
+             city,
+          },
+       })
+    );
+ };
+  
   return (
     <>
       <input
@@ -37,25 +59,27 @@ export default function Input(props) {
         placeholder={props.placeholder}
         onChange={handleChange}
         onClick={()=> setVisible(true)}
+        onBlur={onVisible} //потеря фокуса
       />
+
       {visible ? (
-        <div className="autocomplete">
+        <ul className="autocomplete-list">
           {cities.length > 0 ? (
             cities.map((city) => (
-              <p
+              <li
                 className="autocomplete-item"
                 key={city._id}
-                // onClick={() =>
-                //    onFieldChangeDispatch(city._id, city.name)
-                //}
+                 onClick={() =>
+                    onHandleChangeDispatch(city._id, city.name)
+                }
               >
                 {city.name}
-              </p>
+              </li>
             ))
           ) : (
-            <p className="autocomplete-item">Направление не найдено!</p>
+            <li className="autocomplete-item">Направление не найдено!</li>
           )}
-        </div>
+        </ul>
       ) : (
         ""
       )}

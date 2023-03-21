@@ -1,4 +1,4 @@
-import Input from "../Input";
+import InputDate from "../Forms/InputDate";
 export default function DateFilter(){
     return (
         <div className="date-filter aside-item">
@@ -6,13 +6,13 @@ export default function DateFilter(){
                 <label className="date-form__label">
                     Дата поездки
                 </label>
-                <Input/>
+                <InputDate />
             </div>
             <div className="date-form">
                 <label className="date-form__label">
                     Дата возвращения
                 </label>
-                <Input />
+                <InputDate />
             </div>
         </div>
     );

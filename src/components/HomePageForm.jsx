@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router";
 
-import HeaderFormDirection from "./SearchFormDirection";
-import HeaderFormDate from "./SearchFormDate";
+import SearchFormDirection from "./Forms/SearchFormDirection";
+import SearchFormDate from "./Forms/SearchFormDate";
 import Button from "./Button";
 
 export default function HomePageForm() {
@@ -25,8 +25,8 @@ export default function HomePageForm() {
         </h1>
         <form onSubmit={handleSubmit} className="search-form search-form-main">
           <div className="form-item form-item-column">
-            <HeaderFormDirection>Направление</HeaderFormDirection>
-            <HeaderFormDate>Дата</HeaderFormDate>
+            <SearchFormDirection>Направление</SearchFormDirection>
+            <SearchFormDate>Дата</SearchFormDate>
           </div>
           <Button type="submit" className="btn-search">
             Найти билеты
