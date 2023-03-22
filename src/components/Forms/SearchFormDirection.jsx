@@ -9,11 +9,11 @@ export default function SearchFormDirection(props) {
       <Label>Направление</Label>
       <div className="input-block">
         <div className="input__block-from">
-          <InputCities placeholder="Откуда" direction="from" />
+          <InputCities placeholder="Откуда" direction="routeFrom" />
         </div>
         <Swap />
         <div className="input__block-in">
-          <InputCities placeholder="Куда" direction="in" />
+          <InputCities placeholder="Куда" direction="routeIn" />
         </div>
       </div>
     </div>
