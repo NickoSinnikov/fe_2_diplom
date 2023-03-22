@@ -8,12 +8,12 @@ const initialState = {
   date_start: null,
   date_end: null,
   routeFrom: {
-     id: '1491',
-     city: 'москва',
+    id: "1491",
+    city: "москва",
   },
   routeIn: {
-     id: '1492',
-     city: 'санкт-петербург',
+    id: "1492",
+    city: "санкт-петербург",
   },
 };
 
@@ -24,15 +24,16 @@ const searchSlice = createSlice({
     searchHandleChange: (state, action) => {
       const { name, value } = action.payload;
       state[name] = value;
+      console.log(action.payload);
     },
 
-    cityExchange: (state) => {
-      const from = state.routeFrom;
-      state.routeFrom = state.routeIn;
-      state.routeIn = from;
-    },  
+    // cityExchange: (state) => {
+    //   const from = state.routeFrom;
+    //   state.routeFrom = state.routeIn;
+    //   state.routeIn = from;
+    // },
   },
 });
 
-export const {searchHandleChange, cityExchange} = searchSlice.actions;
+export const { searchHandleChange, cityExchange } = searchSlice.actions;
 export default searchSlice.reducer;

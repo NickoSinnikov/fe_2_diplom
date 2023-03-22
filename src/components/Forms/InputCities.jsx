@@ -1,18 +1,16 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import searchHandleChange from "../../Slice/SearchSlice";
+import { searchHandleChange } from "../../Slice/SearchSlice";
 
 export default function InputCities(props) {
-  const {direction} = props;
+  const { direction } = props;
   const [value, setValue] = useState("");
   const [visible, setVisible] = useState(false);
   const [cities, setCities] = useState([]);
   const dispatch = useDispatch();
-  //const { routeFrom, routeIn } = useSelector((state) => state.search);
-  //const route = props.direction === "routeFrom" ? routeFrom.city : routeIn.city;
-  console.log(direction);
 
+  /* При вводе города отправляем на запрос на сервер для получения списка городов */
   useEffect(() => {
     setValue(value);
     if (value.length > 0) {
@@ -31,11 +29,13 @@ export default function InputCities(props) {
     setValue(target.value);
   };
 
+  /* Скрытие выпадающего списка городов */
   const onVisible = (event) => {
     event.preventDefault();
-    setTimeout(() => setVisible(false), 200);
+    setTimeout(() => setVisible(false), 200); //нужна задержка, т.к. при список исчезает при потере фокуса на inpute и клик не срабатывает
   };
 
+  /* Изменение данных в reducer */
   const onHandleChangeDispatch = (id, city) => {
     dispatch(
       searchHandleChange({
@@ -47,8 +47,6 @@ export default function InputCities(props) {
       })
     );
   };
-
- 
 
   return (
     <>
@@ -69,9 +67,11 @@ export default function InputCities(props) {
             <li
               className="autocomplete-item"
               key={city._id}
-              onClick={() => {setValue(city.name);
-                console.log(city)
-                 onHandleChangeDispatch(city._id, city.name)}}
+              onClick={() => {
+                setValue(city.name);
+                console.log(city);
+                onHandleChangeDispatch(city._id, city.name);
+              }}
             >
               {city.name}
             </li>
