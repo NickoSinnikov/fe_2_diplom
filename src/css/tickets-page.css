@@ -1,18 +1,24 @@
-.tickets-page{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
+.tickets-page {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
 }
 
-.search-form__section{
-    height: 500px;
-    width: 100%;
-    display: flex;
-    align-items: flex-end;
+.search-form__section {
+  height: 500px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
 
-    background-image: url(../img/bg-tickets-page.png);
+  background-image: url(../img/bg-tickets-page.png);
 }
 
-.search-form-row{
-    width: 100%;
+.search-form-row {
+  width: 100%;
+}
+.train-content__block {
+  display: flex;
+}
+.trains__block {
+  width: 70%;
 }

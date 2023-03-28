@@ -1,120 +1,110 @@
 .aside {
-    width: 300px;
-    
-    
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 30%;
 
-    border-radius: 5px;
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    background-color: #3E3C41;
-    color: white;
+  border-radius: 5px;
+
+  background-color: #3e3c41;
+  color: white;
 }
 
-.aside-item{
-    width: 100%;
-    padding: 20px 20px 20px 20px;
-    border-bottom: 1px solid white;
+.aside-item {
+  width: 100%;
+  padding: 20px 20px 20px 20px;
+  border-bottom: 1px solid white;
 }
 
 /** Options filter */
 
-.options-filter__item{
-    display: flex;
-    justify-content: left;
+.options-filter__item {
+  display: flex;
+  justify-content: left;
 }
 
-.date-form__label{
-    font-size: 24px;
-    margin-bottom: 30px;
+.date-form__label {
+  font-size: 24px;
+  margin-bottom: 30px;
 }
 
-.date-form:first-child{
-    margin-bottom: 20px;
+.date-form:first-child {
+  margin-bottom: 20px;
 }
 
-.date-form input{
-    width: 100%;
-    margin-top: 10px;
+.date-form input {
+  width: 100%;
+  margin-top: 10px;
 }
 
-.options-filter__title{
-    font-size: 18px;
+.options-filter__title {
+  font-size: 18px;
 }
 
-.options-filter__item :nth-child(-n+2){
-    margin-right: 20px;
+.options-filter__item :nth-child(-n + 2) {
+  margin-right: 20px;
 }
 
 /** Price filter */
 
-.price-filter{
-    width: 100%;
-    padding: 30px;
+.price-filter {
+  width: 100%;
+  padding: 30px;
 }
 
-.slidercontainer{
-    width: 100%;
-    height: 15px;
-    margin-bottom: 30px;
+.slidercontainer {
+  width: 100%;
+  height: 15px;
+  margin-bottom: 30px;
 }
 
-.price-filter__text{
-    display: flex;
-    justify-content: space-between;
+.price-filter__text {
+  display: flex;
+  justify-content: space-between;
 
-    font-size: 20px;
+  font-size: 20px;
 }
 
 /* * Date filter */
 
-.time-filter{
-    width: 100%;
-    
+.time-filter {
+  width: 100%;
 }
 
-.time-filter_header{
-    display: flex;
-    justify-content: space-between;
-    
+.time-filter_header {
+  display: flex;
+  justify-content: space-between;
 }
 
-.time-filter_button{
-    width:15px;
-    height: 15px;
-    align-self: center;
-    border: 2px solid grey;
-    border-radius: 4px;
-    background-color: inherit;
+.time-filter_button {
+  width: 15px;
+  height: 15px;
+  align-self: center;
+  border: 2px solid grey;
+  border-radius: 4px;
+  background-color: inherit;
 
-    color: white;
-    
-    font-size: 18px;
+  color: white;
 
-    position: relative;
+  font-size: 18px;
+
+  position: relative;
 }
 
-.time-filter_button p{
-margin: 0;
-   position: absolute;               
-   top: 50%;                         
-   left: 50%;
-   margin-right: -50%;
-   transform: translate(-50%, -50%) }
-
-
-.time-filter_button:hover{
-    border-color: orange;
+.time-filter_button p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
 
-
+.time-filter_button:hover {
+  border-color: orange;
+}
 
 .hidden {
-    display: none;
- }
-
-
- 
+  display: none;
+}

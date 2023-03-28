@@ -1,13 +1,13 @@
 import Aside from "./Aside/Aside";
-import Tickets from "./Tickets";
+import TrainBlock from "./TrainBlock";
 import "../css/tickets-page.css";
 import SearchFormDirection from "./Forms/SearchFormDirection";
 import SearchFormDate from "./Forms/SearchFormDate";
 import Button from "./Button";
 
-export default function TicketsPage() {
+export default function TrainPage() {
   return (
-    <div className="tickets-page ">
+    <main className="tickets-page ">
       <section className="search-form__section ">
         <div className="container">
           <form className="search-form search-form-tickets">
@@ -21,10 +21,10 @@ export default function TicketsPage() {
           </form>
         </div>
       </section>
-      <div className="container">
+      <div className="container train-content__block">
         <Aside />
-        <Tickets />
+        <TrainBlock />
       </div>
-    </div>
+    </main>
   );
 }

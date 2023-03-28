@@ -1,0 +1,89 @@
+.train-card {
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+}
+
+.train-card__aside {
+  color: black;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e4e0e9;
+}
+.train-card__main {
+  display: flex;
+
+  width: 75%;
+  align-items: center;
+  justify-content: space-between;
+}
+.train-card__rote {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 18px;
+}
+.train-card__rote-start {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.train-card__number {
+  font-weight: bold;
+}
+
+.train-card__main {
+  display: flex;
+}
+
+.train__direction {
+  display: flex;
+  justify-content: center;
+}
+
+.train__direction-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+}
+
+.train__direction-info__time {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.train__direction-info__railway {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.direction__arrow-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.direction-arrow {
+  font-size: 40px;
+  color: #ffa800c9;
+}
+
+.train-card__btn {
+  width: 210px;
+  height: 40px;
+  color: white;
+  font-size: 24px;
+  background-color: #ffa800c9;
+  border: none;
+  border-radius: 5px;
+}
+
+.train-type__item {
+  display: flex;
+  font-size: 20px;
+  justify-content: space-between;
+}
+
+.train-type__quantity {
+  color: #ffa800;
+}
