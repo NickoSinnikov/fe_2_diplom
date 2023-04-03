@@ -1,7 +1,8 @@
-import TrainCardDirection from "./TrainCardDirection";
-import TrainCardType from "./TrainCardType";
-import train from "../../img/Train.svg";
-export default function Train() {
+import TrainCardDirection from './TrainCardDirection';
+import TrainCardType from './TrainCardType';
+import train from '../../img/Train.svg';
+export default function Train(props) {
+  const train = props;
   return (
     <div
       className="
@@ -9,9 +10,9 @@ export default function Train() {
     >
       <div className="train-card__aside">
         <div className="train-card__image">
-          <img src={train} />{" "}
+          <img src={train} />{' '}
         </div>
-        <div className="train-card__number">116C</div>
+        <div className="train-card__number">train.</div>
         <div className="train-card__rote">
           <span className="train-card__rote-start">
             Адлер<span> &#8594;</span>
