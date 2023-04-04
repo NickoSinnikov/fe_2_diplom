@@ -1,4 +1,6 @@
-export default function TrainCardType() {
+export default function TrainCardType(props) {
+  const departure = props.departure;
+  console.log(departure)
   return (
     <ul
       className="
@@ -14,9 +16,9 @@ export default function TrainCardType() {
         >
           Сидячий
         </span>
-        <span className="train-type__quantity">88</span>
+        <span className="train-type__quantity">{departure.available_seats}</span>
         <span className="train-type__price">
-          от <b>1929</b>₽
+          от <b>{departure.price_info.fourth.bottom_price}</b>₽
         </span>
       </li>
     </ul>
