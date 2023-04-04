@@ -78,12 +78,12 @@
   border-radius: 5px;
 }
 
-.train-type__item {
+.train-seats__item {
   display: flex;
   font-size: 20px;
   justify-content: space-between;
 }
 
-.train-type__quantity {
+.train-seats__count {
   color: #ffa800;
 }

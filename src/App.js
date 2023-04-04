@@ -1,14 +1,15 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import "./App.css";
-import "./css/header.css";
-import "./css/main-section.css";
-import "./css/footer.css";
-import "./css/search-form.css";
-import "./css/train-card.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import HomePage from "./components/HomePage";
-import TrainPage from "./components/TrainPage";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import './App.css';
+import './css/header.css';
+import './css/main-section.css';
+import './css/footer.css';
+import './css/search-form.css';
+import './css/train-card.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import HomePage from './components/HomePage';
+import TrainPage from './components/TrainPage';
+import SeatsPage from './components/SeatsPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/tickets/" element={<TrainPage />} />
+          <Route path="/tickets/seats" element={<SeatsPage />} />
         </Routes>
         <Footer />
       </Router>

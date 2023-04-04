@@ -1,12 +1,28 @@
 import TrainCardDirection from './TrainCardDirection';
 import TrainCardType from './TrainCardType';
 import trainImg from '../../img/Train.svg';
+import { useNavigate } from 'react-router';
+import { fetchSeats, trainAdd } from '../../Slice/seatsSlice';
+import { useDispatch } from 'react-redux';
 export default function Train(route, type) {
   // const train = props;
   // const {departure} = props;
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const { train, option } = route;
-   const { departure, arrival } = train;
+  const { departure, arrival } = train;
   //console.log(departure);
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    // if (option === 'verification') {
+    //   navigate('/order/tickets/train');
+    //   return;
+    // }
+    // console.log(route);
+    dispatch(fetchSeats(route));
+    navigate('/tickets/seats');
+  };
   return (
     <div
       className="
@@ -35,8 +51,10 @@ export default function Train(route, type) {
           <TrainCardDirection />
         </ul>
         <div className="train-card__type">
-          <TrainCardType departure={departure}/>
-          <button className="train-card__btn">Выбрать места</button>
+          <TrainCardType departure={departure} />
+          <button onClick={handleClick} className="train-card__btn">
+            Выбрать места
+          </button>
         </div>
       </div>
     </div>
