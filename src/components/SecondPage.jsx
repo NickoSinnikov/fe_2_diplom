@@ -6,21 +6,25 @@ import SearchFormDate from './Forms/SearchFormDate';
 import { fetchRoutes } from '../Slice/routeSlice';
 import Button from './Button';
 import { useDispatch, useSelector } from 'react-redux';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useNavigate,
+} from 'react-router-dom';
 import TrainPage from './TrainPage';
 import SeatsPage from './SeatsPage';
 export default function SecondPage() {
   const dispatch = useDispatch();
-    
+  const navigate = useNavigate();
   const onSubmit = (e) => {
     e.preventDefault();
     dispatch(fetchRoutes());
-
+    //navigate('/train');
   };
 
   return (
-    
-      <main className="tickets-page ">
+    <main className="tickets-page ">
       <section className="search-form__section ">
         <div className="container">
           <form className="search-form search-form-tickets" onSubmit={onSubmit}>
@@ -34,17 +38,13 @@ export default function SecondPage() {
           </form>
         </div>
       </section>
-      <Router>
+
       <div className="container train-content__block">
         <Routes>
-          <Route path="/tickets/train" element={<TrainPage/>}/>
-          <Route path="/tickets/seats" element={<SeatsPage/>}/>
+          <Route path="/train" element={<TrainPage />} />
+          <Route path="/seats" element={<SeatsPage />} />
         </Routes>
-        
       </div>
-      </Router>
-      </main>
-    
-    
+    </main>
   );
 }

@@ -1,16 +1,20 @@
-import { useNavigate } from "react-router";
+import { useNavigate } from 'react-router';
 
-import SearchFormDirection from "./Forms/SearchFormDirection";
-import SearchFormDate from "./Forms/SearchFormDate";
-import Button from "./Button";
+import SearchFormDirection from './Forms/SearchFormDirection';
+import SearchFormDate from './Forms/SearchFormDate';
+import Button from './Button';
+import { fetchRoutes } from '../Slice/routeSlice';
+import { useDispatch } from 'react-redux';
 
 export default function HomePageForm() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("submit");
-    navigate("/tickets/train");
+    console.log('submit');
+    dispatch(fetchRoutes());
+    navigate('/tickets/train');
   };
 
   return (
