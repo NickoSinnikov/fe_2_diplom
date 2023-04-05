@@ -10,7 +10,7 @@ export default function HomePageForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("submit");
-    navigate("/tickets/");
+    navigate("/tickets/train");
   };
 
   return (
