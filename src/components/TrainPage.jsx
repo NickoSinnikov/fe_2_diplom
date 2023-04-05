@@ -6,21 +6,14 @@ import SearchFormDate from './Forms/SearchFormDate';
 import { fetchRoutes } from '../Slice/routeSlice';
 import Button from './Button';
 import { useDispatch, useSelector } from 'react-redux';
+import { Route } from 'react-router';
+import SeatsPage from './SeatsPage';
 
-export default function TrainPage() {
-  const dispatch = useDispatch();
-  const train = useSelector((state) => state.route);
-  const onSubmit = (e) => {
-    e.preventDefault();
-    dispatch(fetchRoutes());
-
-    // novigate('/order/tickets/train');
-    // console.log(useSelector((state) => state.route));
-    console.log('click');
-  };
+export default function TrainPage(){
+  
 
   return (
-    <main className="tickets-page ">
+      <main className="tickets-page ">
       <section className="search-form__section ">
         <div className="container">
           <form className="search-form search-form-tickets" onSubmit={onSubmit}>
@@ -38,6 +31,5 @@ export default function TrainPage() {
         <Aside />
         <TrainBlock />
       </div>
-    </main>
-  );
+    </main>)
 }
