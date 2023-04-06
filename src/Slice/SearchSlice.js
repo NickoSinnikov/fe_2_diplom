@@ -24,7 +24,6 @@ const searchSlice = createSlice({
     searchHandleChange: (state, action) => {
       const { name, value } = action.payload;
       state[name] = value;
-      console.log(action.payload);
     },
 
     // cityExchange: (state) => {

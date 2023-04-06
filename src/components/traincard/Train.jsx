@@ -1,9 +1,9 @@
-import TrainCardDirection from './TrainCardDirection';
-import TrainCardType from './TrainCardType';
-import trainImg from '../../img/Train.svg';
-import { useNavigate } from 'react-router';
-import { fetchSeats, trainAdd } from '../../Slice/seatsSlice';
-import { useDispatch } from 'react-redux';
+import TrainCardDirection from "./TrainCardDirection";
+import TrainCardType from "./TrainCardType";
+import trainImg from "../../img/Train.svg";
+import { useNavigate } from "react-router";
+import { fetchSeats, trainAdd } from "../../Slice/seatsSlice";
+import { useDispatch } from "react-redux";
 export default function Train(route, type) {
   // const train = props;
   // const {departure} = props;
@@ -20,8 +20,9 @@ export default function Train(route, type) {
     //   return;
     // }
     // console.log(route);
-    dispatch(fetchSeats(route));
-    navigate('/tickets/seats');
+    dispatch(trainAdd(route));
+    dispatch(fetchSeats());
+    navigate("/tickets/seats");
   };
   return (
     <div
@@ -30,7 +31,7 @@ export default function Train(route, type) {
     >
       <div className="train-card__aside">
         <div className="train-card__image">
-          <img src={trainImg} />{' '}
+          <img src={trainImg} />{" "}
         </div>
         <div className="train-card__number">{departure.train.name}</div>
         <div className="train-card__rote">

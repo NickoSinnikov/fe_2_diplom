@@ -1,15 +1,16 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css';
-import './css/header.css';
-import './css/main-section.css';
-import './css/footer.css';
-import './css/search-form.css';
-import './css/train-card.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import HomePage from './components/HomePage';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./App.css";
+import "./css/header.css";
+import "./css/main-section.css";
+import "./css/footer.css";
+import "./css/search-form.css";
+import "./css/train-card.css";
+import "./css/seats.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import HomePage from "./components/HomePage";
 
-import SecondPage from './components/SecondPage';
+import SecondPage from "./components/SecondPage";
 
 function App() {
   return (

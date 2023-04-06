@@ -1,12 +1,12 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const fetchSeats = createAsyncThunk(
-  'seats/fetchSeats',
+  "seats/fetchSeats",
   async (type, { rejectWithValue, getState }) => {
     // const { filter } = getState();
 
     const { train } = getState().seats.train;
-    console.log(train.departure);
+    console.log(getState());
     const id = train.departure._id;
     const url = `https://netology-trainbooking.netoservices.ru/routes/${id}/seats`;
 
@@ -23,7 +23,7 @@ export const fetchSeats = createAsyncThunk(
       const response = await fetch(url);
 
       if (!response.ok) {
-        throw new Error('Server Error');
+        throw new Error("Server Error");
       }
       const data = await response.json();
       return { type, data };
@@ -34,11 +34,11 @@ export const fetchSeats = createAsyncThunk(
 );
 
 const initialState = {
-  train: JSON.parse(localStorage.getItem('train')) || null,
+  train: JSON.parse(localStorage.getItem("train")) || null,
   status: null,
   error: null,
 
-  departure: JSON.parse(localStorage.getItem('seats-departure')) || {
+  departure: JSON.parse(localStorage.getItem("seats-departure")) || {
     coachClass: null,
     coachItems: [],
     seats: {},
@@ -46,7 +46,7 @@ const initialState = {
     services: {},
     coachList: [],
   },
-  arrival: JSON.parse(localStorage.getItem('seats-arrival')) || {
+  arrival: JSON.parse(localStorage.getItem("seats-arrival")) || {
     coachClass: null,
     coachItems: [],
     seats: {},
@@ -56,12 +56,12 @@ const initialState = {
   },
 };
 const seatsSlice = createSlice({
-  name: 'seats',
+  name: "seats",
   initialState,
   reducers: {
     trainAdd: (state, action) => {
       state.train = action.payload;
-      localStorage.setItem('train', JSON.stringify(action.payload));
+      localStorage.setItem("train", JSON.stringify(action.payload));
     },
     trainClear: (state) => {
       state.train = null;
@@ -124,17 +124,17 @@ const seatsSlice = createSlice({
   },
   extraReducers: {
     [fetchSeats.pending]: (state) => {
-      state.status = 'panding';
+      state.status = "panding";
       state.error = null;
     },
     [fetchSeats.fulfilled]: (state, action) => {
-      state.status = 'resolved';
+      state.status = "resolved";
       const { type, data } = action.payload;
       state[type].coachList = data;
       localStorage.setItem(`seats-${type}`, JSON.stringify(state[type]));
     },
     [fetchSeats.rejected]: (state, action) => {
-      state.status = 'rejected';
+      state.status = "rejected";
       state.error = action.payload;
     },
   },
