@@ -4,11 +4,11 @@ import { useSelector, useDispatch } from "react-redux";
 import { passengersPriceChange } from "../../Slice/passengersSlice";
 //import './Coach.css';
 //import rub from '../../../img/tickets/tickets-rub.svg';
-// import LuxClass from '../classes/LuxClass';
-// import KupeClass from '../classes/KupeClass';
-// import PlatzcartClass from '../classes/PlatzcartClass';
-// import SeatsClass from '../classes/SeatsClass';
-// import PriceFormat from '../../elements/PriceFormat';
+import LuxClass from './coach-classes/Lux';
+import KupeClass from './coach-classes/Kupe';
+import PlatskartClass from './coach-classes/Platskart';
+import SeatsClass from './coach-classes/Seats';
+ import Price from './Price';
 //import Service from './Service';
 
 export default function Coach({ coach, seatsList, typeTicket }) {
@@ -160,17 +160,17 @@ export default function Coach({ coach, seatsList, typeTicket }) {
           <h5 className="coach-info-title">Стоимость</h5>
           {!type.lux && (
             <p className="coach-info-text">
-              {/* <PriceFormat title="coach-info" value={coach.top_price} /> */}
+             <Price title="coach-info" value={coach.top_price} /> 
               <img className="coach-ticket-сurrency" src="{rub}" alt="руб." />
             </p>
           )}
           <p className="coach-info-text">
-            {/* <PriceFormat title="coach-info" value={coach.bottom_price} /> */}
+             <Price title="coach-info" value={coach.bottom_price} /> 
             <img className="coach-ticket-сurrency" src="{rub}" alt="руб." />
           </p>
           {type.platzcart && (
             <p className="coach-info-text">
-              {/* <PriceFormat title="coach-info" value={coach.side_price} /> */}
+              <Price title="coach-info" value={coach.side_price} /> 
               <img className="coach-ticket-сurrency" src="{rub}" alt="руб." />
             </p>
           )}
@@ -202,7 +202,7 @@ export default function Coach({ coach, seatsList, typeTicket }) {
           {seatsList.filter((el) => el.available === false).length} человек
           выбирают места в этом поезде
         </div>
-        {/* {type.lux && (
+        {type.lux && (
           <LuxClass
             id={coach._id}
             seatsList={seatsList}
@@ -217,7 +217,7 @@ export default function Coach({ coach, seatsList, typeTicket }) {
           />
         )}
         {type.platzcart && (
-          <PlatzcartClass
+          <PlatskartClass
             id={coach._id}
             seatsList={seatsList}
             typeTicket={typeTicket}
@@ -229,15 +229,15 @@ export default function Coach({ coach, seatsList, typeTicket }) {
             seatsList={seatsList}
             typeTicket={typeTicket}
           />
-        )} */}
+        )} 
       </div>
       <div className="coach-total">
         {child + adult + service > 0 && (
           <p className="coach-total-text">
-            {/* <PriceFormat
+            <Price
                      title="coach-total"
                      value={child + adult + service}
-                  /> */}
+                  /> 
             <img className="coach-total-сurrency" src="{rub}" alt="руб." />
           </p>
         )}

@@ -1,6 +1,6 @@
 import React from "react";
 import Swap from "./Swap";
-import Label from "../Label";
+import Label from "../homepage/Label";
 import InputDate from "./InputDate";
 
 export default function SearchFormDate(props) {

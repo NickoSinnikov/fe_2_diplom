@@ -11,9 +11,9 @@ import SeatsPage from './SeatsPage';
 
 export default function TrainPage() {
   return (
-    <div className="container train-content__block">
-      <Aside />
+   
+      
       <TrainBlock />
-    </div>
+    
   );
 }

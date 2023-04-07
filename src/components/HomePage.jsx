@@ -1,7 +1,7 @@
-import About from "./About";
-import Faq from "./Faq";
-import Reviews from "./Reviews";
-import HomePageForm from "./HomePageForm";
+import About from "./homepage/About";
+import Faq from "./homepage/Faq";
+import Reviews from "./homepage/Reviews";
+import HomePageForm from "./homepage/HomePageForm";
 
 export default function HomePage(){
     return(

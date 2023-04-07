@@ -1,6 +1,6 @@
-import firstImg from '../img/working-list__first.svg';
-import secondImg from '../img/working-list__second.svg';
-import thirdImg from '../img/working-list__third.svg';
+import firstImg from '../../img/working-list__first.svg';
+import secondImg from '../../img/working-list__second.svg';
+import thirdImg from '../../img/working-list__third.svg';
 
 export default function Faq(){
 return(

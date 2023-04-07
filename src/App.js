@@ -6,8 +6,8 @@ import "./css/footer.css";
 import "./css/search-form.css";
 import "./css/train-card.css";
 import "./css/seats.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./components/homepage/Header";
+import Footer from "./components/homepage/Footer";
 import HomePage from "./components/HomePage";
 
 import SecondPage from "./components/SecondPage";

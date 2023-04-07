@@ -40,6 +40,7 @@ export default function SecondPage() {
       </section>
 
       <div className="container train-content__block">
+      <Aside />
         <Routes>
           <Route path="/train" element={<TrainPage />} />
           <Route path="/seats" element={<SeatsPage />} />

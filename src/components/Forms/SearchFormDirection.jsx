@@ -1,5 +1,5 @@
 import React from "react";
-import Label from "../Label";
+import Label from "../homepage/Label";
 import Swap from "./Swap";
 import InputCities from "./InputCities";
 
