@@ -15,11 +15,6 @@ export default function Train(route, type) {
 
   const handleClick = (e) => {
     e.preventDefault();
-    // if (option === 'verification') {
-    //   navigate('/order/tickets/train');
-    //   return;
-    // }
-    // console.log(route);
     dispatch(trainAdd(route));
     dispatch(fetchSeats());
     navigate("/tickets/seats");

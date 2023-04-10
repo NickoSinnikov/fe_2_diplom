@@ -10,7 +10,7 @@ import "./css/passengers-page.css";
 import Header from "./components/homepage/Header";
 import Footer from "./components/homepage/Footer";
 import HomePage from "./components/HomePage";
-import PassengersPage from "./components/PassengersPage";
+import Passengers from "./components/Passengers";
 
 import SecondPage from "./components/SecondPage";
 
@@ -22,7 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/tickets/*" element={<SecondPage />} />
-          <Route path="/passengers" element={<PassengersPage />} />
+          <Route path="/passengers/*" element={<Passengers />} />
         </Routes>
         <Footer />
       </Router>

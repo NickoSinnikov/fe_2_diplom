@@ -39,7 +39,7 @@ export default function SeatsPage() {
   }, [passengersCount, seatsarrival, seatsDeparture, passengersCountAll]);
 
   const handleClick = () => {
-    navigate("/passengers/");
+    navigate("/passengers/passengers");
   };
 
   return (

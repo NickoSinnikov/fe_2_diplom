@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
 import { useDispatch, useSelector } from "react-redux";
-// import validateDocument from './validateDocument';
+import validateDocument from './validateDoc';
 import { addPassengersData } from "../../Slice/passengersSlice";
 // import "./PassengerForm.css";
 
@@ -54,40 +53,40 @@ export default function PassengerForm({ number, type }) {
     setTimeout(() => setMessage(""), 10 * 1000);
   };
 
-  //   const onSubmit = (e) => {
-  //     e.preventDefault();
-  //     if (!(form.surname.trim() && form.name.trim() && form.lastname.trim())) {
-  //       manageМessages("Необходимо ввести фамилию, имя и отчество пассажира");
-  //       return;
-  //     }
-  //     if (!form.sex) {
-  //       manageМessages("Выберите пол пассажира");
-  //       return;
-  //     }
-  //     if (!form.birth) {
-  //       manageМessages("Укажите дату рождения в формате дд-мм-гг");
-  //       return;
-  //     }
-  //     if (
-  //       documentType === "certificate" &&
-  //       !validateDocument(documentType, form.document)
-  //     ) {
-  //       manageМessages(
-  //         "Номер свидетельства о рожденни указан некорректно Пример: VIII-ЫП-123456"
-  //       );
-  //       return;
-  //     }
-  //     if (
-  //       documentType === "passport" &&
-  //       (!(form.series && validateDocument("series", form.series)) ||
-  //         !validateDocument(documentType, form.document))
-  //     ) {
-  //       manageМessages("Номер или серия паспорта введы не некорректно");
-  //       return;
-  //     }
-  //     setMessage("");
-  //     dispatch(addPassengersData({ number, data: form }));
-  //   };
+    const onSubmit = (e) => {
+      e.preventDefault();
+      if (!(form.surname.trim() && form.name.trim() && form.lastname.trim())) {
+        manageМessages("Необходимо ввести фамилию, имя и отчество пассажира");
+        return;
+      }
+      if (!form.sex) {
+        manageМessages("Выберите пол пассажира");
+        return;
+      }
+      if (!form.birth) {
+        manageМessages("Укажите дату рождения в формате дд-мм-гг");
+        return;
+      }
+      if (
+        documentType === "certificate" &&
+        !validateDocument(documentType, form.document)
+      ) {
+        manageМessages(
+          "Номер свидетельства о рожденни указан некорректно Пример: VIII-ЫП-123456"
+        );
+        return;
+      }
+      if (
+        documentType === "passport" &&
+        (!(form.series && validateDocument("series", form.series)) ||
+          !validateDocument(documentType, form.document))
+      ) {
+        manageМessages("Номер или серия паспорта введы не некорректно");
+        return;
+      }
+      setMessage("");
+      dispatch(addPassengersData({ number, data: form }));
+    };
 
   return (
     <div className="passengerForm">
@@ -253,6 +252,7 @@ export default function PassengerForm({ number, type }) {
                   name="series"
                   value={form.series}
                   onChange={handleChange}
+                  maxLength="4"
                 />
               </label>
             )}
@@ -271,6 +271,7 @@ export default function PassengerForm({ number, type }) {
                 name="document"
                 value={form.document}
                 onChange={handleChange}
+                maxLength={documentType === "passport" ? "6" : "12"}
               />
             </label>
           </div>
@@ -295,7 +296,7 @@ export default function PassengerForm({ number, type }) {
             <button
               type="button"
               className="button passengerForm-button"
-              //   onClick={onSubmit}
+                onClick={onSubmit}
             >
               Следующий пассажир
             </button>

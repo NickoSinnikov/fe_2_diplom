@@ -11,9 +11,6 @@ import SeatsPage from './SeatsPage';
 
 export default function TrainPage() {
   return (
-   
-      
-      <TrainBlock />
-    
+      <TrainBlock /> //убрать!!
   );
 }

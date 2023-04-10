@@ -5,6 +5,7 @@ import searchReducer from './SearchSlice';
 import routeSlice from './routeSlice';
 import seatsSlice from './seatsSlice';
 import passengersSlice from './passengersSlice';
+import paySlice from './paySlice'
 
 export const store = configureStore({
   reducer: {
@@ -12,5 +13,6 @@ export const store = configureStore({
     routes: routeSlice,
     seats: seatsSlice,
     passengers: passengersSlice,
+    pay: paySlice,
   },
 });
