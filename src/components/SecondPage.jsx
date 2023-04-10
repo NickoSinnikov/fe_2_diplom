@@ -44,6 +44,7 @@ export default function SecondPage() {
         <Routes>
           <Route path="/train" element={<TrainPage />} />
           <Route path="/seats" element={<SeatsPage />} />
+          {/* <Route path="/passengers" element={<Pass} */}
         </Routes>
       </div>
     </main>
