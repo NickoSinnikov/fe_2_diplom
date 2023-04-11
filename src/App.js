@@ -17,7 +17,6 @@ import Header from './components/homepage/Header';
 import Footer from './components/homepage/Footer';
 import HomePage from './components/HomePage';
 import Passengers from './components/Passengers';
-
 import SecondPage from './components/SecondPage';
 import SuccessPage from './components/SuccessPage';
 
