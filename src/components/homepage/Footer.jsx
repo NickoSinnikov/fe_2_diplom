@@ -1,6 +1,11 @@
 /* eslint-disable react/self-closing-comp */
 import React from 'react';
 import Logo from './Logo';
+import fb from '../../img/fb.svg';
+import tw from '../../img/tw.svg';
+import In from '../../img/in.svg';
+import google from '../../img/google.svg';
+import youtube from '../../img/youtube.svg';
 
 export default function Footer() {
    return (
@@ -36,24 +41,36 @@ export default function Footer() {
                   <form className="subscribe__form">
                      <label>Будьте в курсе событий</label>
                      <input className="subscribe__input" placeholder="e-mail" />
-                     <button type="button" className="subscribe__btn">Отправить</button>
+                     <button type="button" className="subscribe__btn">
+                        Отправить
+                     </button>
                   </form>
                   <h4 className="footer__title">Подписывайся на нас</h4>
                   <ul className="socials">
-                     <li className="social">
-                        <img src="" alt='alt'/>
+                     <li className="social youtube">
+                        <a href="#" className="social-link">
+
+                        </a>
                      </li>
-                     <li className="social">
-                        <img src="" alt='alt'/>
+                     <li className="social in">
+                        <a href="#" className="social-link">
+
+                        </a>
                      </li>
-                     <li className="social">
-                        <img src="" alt='alt'/>
+                     <li className="social google">
+                        <a href="#" className="social-link">
+
+                        </a>
                      </li>
-                     <li className="social">
-                        <img src="" alt='alt'/>
+                     <li className="social facebook">
+                        <a href="#" className="social-link">
+
+                        </a>
                      </li>
-                     <li className="social">
-                        <img src="" alt='alt'/>
+                     <li className="social twitter">
+                        <a href="#" className="social-link">
+                           
+                        </a>
                      </li>
                   </ul>
                </div>
