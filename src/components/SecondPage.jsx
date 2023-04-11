@@ -6,7 +6,7 @@ import {
   Routes,
   useNavigate,
 } from "react-router-dom";
-import TrainPage from "./TrainPage";
+import TrainBlock from "./TrainBlock";
 import SeatsPage from "./SeatsPage";
 import StageBar from "./StageBar";
 import Aside from "./Aside/Aside";
@@ -41,13 +41,13 @@ export default function SecondPage() {
         </div>
       </section>
 
-      <div className="container train-content__block">
+      <section className="container content__section">
         <Aside />
         <Routes>
-          <Route path="/train" element={<TrainPage />} />
+          <Route path="/train" element={<TrainBlock />} />
           <Route path="/seats" element={<SeatsPage />} />
         </Routes>
-      </div>
+      </section>
     </main>
   );
 }

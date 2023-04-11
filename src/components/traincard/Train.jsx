@@ -21,9 +21,7 @@ export default function Train(route, type) {
       navigate('/tickets/seats');
    };
    return (
-      <div
-         className="
-        train-card"
+      <div className="train-card"
       >
          <div className="train-card__aside">
             <div className="train-card__image">

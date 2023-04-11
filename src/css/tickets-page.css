@@ -16,10 +16,15 @@
 .search-form-row {
   width: 100%;
 }
-.train-content__block {
+.content__section {
   display: flex;
   align-items: flex-start;
+  justify-content: space-around;
+
+  margin-top: 50px;
 }
-.trains__block {
+
+
+.content__block{
   width: 70%;
 }

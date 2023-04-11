@@ -41,7 +41,7 @@ export default function Passengers() {
           <StageBar />
         </div>
       </section>
-      <div className="container train-content__block">
+      <div className="container content__section">
         <PassengerAside />
         <Routes>
           <Route path="/passengers" element={<PassengerPage />} />

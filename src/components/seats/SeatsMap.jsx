@@ -18,7 +18,7 @@ import {
   coachItemsClear,
 } from "../../Slice/seatsSlice";
 
-import Train from "../traincard/Train";
+import TicketTrain from "../traincard/TicketTrain";
 import Coach from "./Coach";
 
 export default function SeatsMap({ type }) {
@@ -109,7 +109,7 @@ export default function SeatsMap({ type }) {
             Выбрать другой поезд
           </button>
         </div>
-        <Train train={train} type={type} option="ticket_header-train" />
+        <TicketTrain train={train} type={type} option="ticket_header-train" />
       </div>
       <section className="ticket_count">
         <h4 className="ticket_title ticket_count-title">Количество билетов</h4>

@@ -43,8 +43,7 @@ export default function SeatsPage() {
   };
 
   return (
-    <div className="container train-content__block">
-      <section className="seats order_options">
+      <section className="seats order_options content__block">
         <h3 className="title seats_title">Выбор мест</h3>
         {train.departure && (
           <SeatsMap type="departure" className="ticket_header-train" />
@@ -63,6 +62,6 @@ export default function SeatsPage() {
           </button>
         </div>
       </section>
-    </div>
+    
   );
 }

@@ -40,7 +40,7 @@ export default function PassengerPage() {
     navigate("/passengers/pay");
   };
   return (
-    <section className="passengers order_passengers">
+    <section className="passengers order_passengers content__block">
       {[...Array(passengersCount.adult)].map((e, i) => (
         <PassengerForm type="adult" number={i + 1} key={nanoid()} />
       ))}

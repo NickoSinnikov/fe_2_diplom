@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/react-in-jsx-scope */
 import React from "react";
+import rub from "../../img/Rub.svg"
 
 export default function TrainCardType({departure}) {
-  
+  console.log(departure)
   return (
     <ul className="train-type__block">
       {departure.available_seats_info.fourth && (
@@ -12,10 +13,7 @@ export default function TrainCardType({departure}) {
           <p className="train-seats__count">
             {departure.available_seats_info.fourth}
           </p>
-          <span className="train-seats__price">
-            от
-            {departure.price_info.fourth.top_price}
-          </span>
+          <p >от <span className="train-seats__price">{departure.price_info.fourth.bottom_price} </span><img src={rub} alt="руб"/></p>
         </li>
       )}
       {departure.available_seats_info.third && (
@@ -24,10 +22,8 @@ export default function TrainCardType({departure}) {
           <p className="train-seats__count">
             {departure.available_seats_info.third}
           </p>
-          <span className="train-seats__price">
-            от
-            {departure.price_info.third.side_price}
-          </span>
+          <p >от <span className="train-seats__price">{departure.price_info.third.side_price} </span><img src={rub} alt="руб"/></p>
+     
         </li>
       )}
       {departure.available_seats_info.second && (
@@ -36,10 +32,7 @@ export default function TrainCardType({departure}) {
           <p className="train-seats__count">
             {departure.available_seats_info.second}
           </p>
-          <span className="train-seats__price">
-            от
-            {departure.price_info.second.bottom_price}
-          </span>
+          <p >от <span className="train-seats__price">{departure.price_info.second.bottom_price} </span><img src={rub} alt="руб"/></p>
         </li>
       )}
       {departure.available_seats_info.first && (
@@ -48,10 +41,7 @@ export default function TrainCardType({departure}) {
           <p className="train-seats__count">
             {departure.available_seats_info.first}
           </p>
-          <span className="train-seats__price">
-            от
-            {departure.price_info.first.top_price}
-          </span>
+          <p >от <span className="train-seats__price">{departure.price_info.first.price} </span><img src={rub} alt="руб"/></p>
         </li>
       )}
     </ul>

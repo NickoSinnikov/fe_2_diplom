@@ -128,7 +128,7 @@ export default function Coach({ coach, seatsList, typeTicket }) {
                   <>
                      <p className="coach-info-text">
                         Верхние{' '}
-                        <strong>
+                        <span>
                            {type.kupe &&
                               seatsList.filter((el) => el.index % 2 === 0)
                                  .length}
@@ -138,11 +138,11 @@ export default function Coach({ coach, seatsList, typeTicket }) {
                               ).length}
                            {type.seat &&
                               (seatsList.length < 32 ? seatsList.length : 32)}
-                        </strong>
+                        </span>
                      </p>
                      <p className="coach-info-text">
                         Нижние{' '}
-                        <strong>
+                        <span>
                            {type.kupe &&
                               seatsList.filter((el) => el.index % 2 !== 0)
                                  .length}
@@ -151,16 +151,16 @@ export default function Coach({ coach, seatsList, typeTicket }) {
                                  (el) => el.index % 2 !== 0 && el.index < 33
                               ).length}
                            {type.seat && seatsList.length - 32}
-                        </strong>
+                        </span>
                      </p>
                   </>
                )}
                {type.platzcart && (
                   <p className="coach-info-text">
                      Боковые{' '}
-                     <strong>
+                     <span>
                         {seatsList.filter((el) => el.index > 32).length}
-                     </strong>
+                     </span>
                   </p>
                )}
             </div>
