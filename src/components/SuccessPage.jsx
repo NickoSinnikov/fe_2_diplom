@@ -1,3 +1,4 @@
+/* eslint-disable react/self-closing-comp */
 import React from 'react';
 import { useNavigate } from 'react-router';
 import { useSelector } from 'react-redux';

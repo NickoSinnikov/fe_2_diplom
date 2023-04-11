@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
+import { nanoid } from "nanoid";
 import PassengerForm from "../Forms/PassengersForm";
 import { clearPassengersData } from "../../Slice/passengersSlice";
 import { fetchRoutes } from "../../Slice/routeSlice";
-import { nanoid } from "nanoid";
 import { stageChange } from "../../Slice/stageSlice";
 
 export default function PassengerPage() {

@@ -100,7 +100,7 @@ export default function SeatsMap({ type }) {
             type === "departure" ? "routeTo" : "routeBack"
           }`}
         >
-          <img src={type === "departure" ? routeTo : routeBack} />
+          <img src={type === "departure" ? routeTo : routeBack} alt="alt"/>
           <button
             type="button"
             className="button ticket_header-button"
@@ -203,7 +203,7 @@ export default function SeatsMap({ type }) {
                   disabled={!classes[el].available}
                   onClick={() => handleClick(el)}
                 >
-                  <img src={classes[el].icon} />
+                  <img src={classes[el].icon} alt="alt"/>
                   <p className="ticket_class-name">{classes[el].name}</p>
                 </button>
               </li>

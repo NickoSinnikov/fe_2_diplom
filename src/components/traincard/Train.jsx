@@ -52,7 +52,7 @@ export default function Train(route, type) {
             </ul>
             <div className="train-card__type">
                <TrainCardType departure={departure} />
-               <button tupe="button" onClick={handleClick} className="train-card__btn">
+               <button type="button" onClick={handleClick} className="train-card__btn">
                   Выбрать места
                </button>
             </div>

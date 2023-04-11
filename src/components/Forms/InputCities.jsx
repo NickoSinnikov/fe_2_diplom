@@ -1,12 +1,11 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-underscore-dangle */
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { searchHandleChange } from "../../Slice/SearchSlice";
 
 export default function InputCities(props) {
-  const { direction } = props;
+  const { direction, type, placeholder } = props;
   const [value, setValue] = useState("");
   const [visible, setVisible] = useState(false);
   const [cities, setCities] = useState([]);
@@ -54,11 +53,11 @@ export default function InputCities(props) {
     <>
       <input
         className="form__input"
-        type={props.type}
-        placeholder={props.placeholder}
+        type={type}
+        placeholder={placeholder}
         onChange={handleChange}
         onClick={() => setVisible(true)}
-        onBlur={onVisible} //потеря фокуса
+        onBlur={onVisible}
         value={value}
         name={direction}
       />

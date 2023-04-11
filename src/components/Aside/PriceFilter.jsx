@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+
 import Slider from '@mui/material/Slider';
 import React,{ useState } from 'react';
 

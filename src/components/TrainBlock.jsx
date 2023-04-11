@@ -1,3 +1,4 @@
+/* eslint-disable react/self-closing-comp */
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Train from "./traincard/Train";

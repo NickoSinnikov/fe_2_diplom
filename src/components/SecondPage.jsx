@@ -1,7 +1,4 @@
 import React from "react";
-
-import SearchFormDirection from "./Forms/SearchFormDirection";
-import SearchFormDate from "./Forms/SearchFormDate";
 import { useDispatch, useSelector } from "react-redux";
 import {
   BrowserRouter as Router,
@@ -15,6 +12,8 @@ import StageBar from "./StageBar";
 import Aside from "./Aside/Aside";
 import Button from "./Button";
 import { fetchRoutes } from "../Slice/routeSlice";
+import SearchFormDirection from "./Forms/SearchFormDirection";
+import SearchFormDate from "./Forms/SearchFormDate";
 
 export default function SecondPage() {
   const dispatch = useDispatch();
