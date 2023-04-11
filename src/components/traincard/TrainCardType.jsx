@@ -2,13 +2,10 @@
 /* eslint-disable react/react-in-jsx-scope */
 import React from "react";
 
-export default function TrainCardType(props) {
-  const departure = props;
+export default function TrainCardType({departure}) {
+  
   return (
-    <ul
-      className="
-        train-type__block"
-    >
+    <ul className="train-type__block">
       {departure.available_seats_info.fourth && (
         <li className="train-seats__item">
           <p className="train-seats__type">Сидячий</p>

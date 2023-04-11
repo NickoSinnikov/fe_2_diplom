@@ -1,5 +1,4 @@
-{"homepage": "https://github.com/NickoSinnikov/fe_2_diplom",
-  "name": "fe_2_diplom",
+ { "name": "fe_2_diplom",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
