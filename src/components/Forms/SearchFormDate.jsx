@@ -1,10 +1,11 @@
 /* eslint-disable react/prop-types */
+/* eslint-disable react/no-unstable-nested-components */
 import React, { forwardRef, useEffect, useState } from "react";
-import ru from "date-fns/locale/ru";
-import Label from "../homepage/Label";
 import { useDispatch, useSelector } from "react-redux";
-import DatePicker from "react-datepicker";
+import ru from "date-fns/locale/ru";
 import "react-datepicker/dist/react-datepicker.css";
+import DatePicker from "react-datepicker";
+import Label from "../homepage/Label";
 import { searchHandleChange } from "../../Slice/SearchSlice";
 
 

@@ -1,3 +1,4 @@
+/* eslint-disable react/react/self-closing-comp */
 import React from "react";
 import { useDispatch } from "react-redux";
 import { cityExchange } from "../../Slice/SearchSlice";

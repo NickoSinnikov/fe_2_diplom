@@ -35,7 +35,7 @@ export default function HomePageForm() {
                   <SearchFormDirection>Направление</SearchFormDirection>
                   <SearchFormDate>Дата</SearchFormDate>
                </div>
-               <Button type="submit" className="btn-search">
+               <Button  >
                   Найти билеты
                </Button>
             </form>

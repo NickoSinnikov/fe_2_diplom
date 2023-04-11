@@ -2,8 +2,8 @@
 import React from "react";
 
 export default function Button(props){
-    const {type, className, children} = props
+    const { children} = props
     return(
-        <button type={type} className={className}>{children}</button>
+        <button type="submit" className='btn-search'>{children}</button>
     )
 }

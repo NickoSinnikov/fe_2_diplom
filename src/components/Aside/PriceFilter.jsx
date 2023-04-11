@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-
+/* eslint-disable react/jsx-no-bind */
 import Slider from '@mui/material/Slider';
 import React,{ useState } from 'react';
 
@@ -53,7 +53,7 @@ export default function PriceFilter() {
                value={value1}
                onChange={handleChange1}
                valueLabelDisplay="auto"
-               getAriaValueText={valueText}
+               // getAriaValueText={valueText}
                disableSwap
             />
          </div>
