@@ -1,7 +1,9 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/react-in-jsx-scope */
 import moment from "moment/moment";
 
 export default function TrainCardDirection({ departure }) {
- 
+
   return (
     <li className="train__direction">
       <div className="train__direction-info ">

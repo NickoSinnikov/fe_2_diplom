@@ -1,4 +1,9 @@
-import React from "react";
+/* eslint-disable no-loop-func */
+/* eslint-disable guard-for-in */
+/* eslint-disable no-underscore-dangle */
+/* eslint-disable camelcase */
+/* eslint-disable no-restricted-syntax */
+
 
 import { createSlice } from "@reduxjs/toolkit";
 

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { forwardRef, useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import DatePicker from "react-datepicker";

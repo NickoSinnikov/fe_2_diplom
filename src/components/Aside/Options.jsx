@@ -1,4 +1,4 @@
-import Switch from "react-switch"
+import Switch from "react-switch";
 import { useState } from "react";
 export default function Options(props){
 

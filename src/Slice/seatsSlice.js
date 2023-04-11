@@ -1,3 +1,8 @@
+/* eslint-disable no-loop-func */
+/* eslint-disable guard-for-in */
+/* eslint-disable no-underscore-dangle */
+/* eslint-disable camelcase */
+/* eslint-disable no-restricted-syntax */
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const fetchSeats = createAsyncThunk(
@@ -10,7 +15,7 @@ export const fetchSeats = createAsyncThunk(
     const id = train.departure._id;
     const url = `https://netology-trainbooking.netoservices.ru/routes/${id}/seats`;
 
-    
+
 
     try {
       const response = await fetch(url);
