@@ -1,19 +1,32 @@
-export default function TrainCardDirection() {
+import moment from "moment/moment";
+
+export default function TrainCardDirection({ departure }) {
+ 
   return (
     <li className="train__direction">
       <div className="train__direction-info ">
-        <div className="train__direction-info__time">00:10</div>
-        <div className="train__direction-info__city">Москва</div>
-        <div className="train__direction-info__railway">Курский вокзал</div>
+        <div className="train__direction-info__time">
+          {moment.unix(departure.from.datetime).utc().format("HH:mm")}
+        </div>
+        <div className="train-card__rote-text">{departure.from.city.name}</div>
+        <div className="train__direction-info__railway train-card__rote-text">
+          {departure.from.railway_station_name}
+        </div>
       </div>
       <div className="direction__arrow-time">
-        <p className="travel-time">9:42</p>
+        <p className="travel-time">
+          {moment.unix(departure.duration).utc().format("HH:mm")}
+        </p>
         <div className="direction-arrow">&#8594;</div>
       </div>
       <div className="train__direction-info">
-        <div className="train__direction-info__time">09:52</div>
-        <div className="train__direction-info__city">Санкт-Петербург</div>
-        <div className="train__direction-info__railway">Ладожский вокзал</div>
+        <div className="train__direction-info__time">
+          {moment.unix(departure.to.datetime).utc().format("HH:mm")}
+        </div>
+        <div className="train-card__rote-text">{departure.to.city.name}</div>
+        <div className="train__direction-info__railway train-card__rote-text">
+          {departure.to.railway_station_name}
+        </div>
       </div>
     </li>
   );

@@ -26,8 +26,8 @@
 
   font-size: 18px;
 }
-.train-card__rote-start {
-  color: rgba(0, 0, 0, 0.5);
+.train-card__rote-text {
+  text-transform: capitalize;
 }
 
 .train-card__number {

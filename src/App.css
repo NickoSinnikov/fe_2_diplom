@@ -1,44 +1,51 @@
-*, body{
+*,
+body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-h1,h2,h3,h4{
+h1,
+h2,
+h3,
+h4 {
   margin: 0;
   padding: 0;
 }
 
-body{
-width: 100%;
-font-family: 'Roboto';
+body {
+  width: 100%;
+  font-family: "Roboto";
 
-font-size: 30px;
+  font-size: 30px;
 }
 
-li{
+li {
   list-style: none;
 }
 
-a{
+a {
   text-decoration: none;
 }
-button{
+button {
   cursor: pointer;
 }
-.container{
+.container {
   width: 1112px;
   margin: 0 auto 0 auto;
 }
-.main{
+
+.container-rel {
+  position: relative;
+}
+.main {
   display: flex;
   flex-direction: column;
   width: 100%;
-z-index: 0;
- 
+  z-index: 0;
 }
 
-.App{
+.App {
   display: flex;
   flex-direction: column;
 }

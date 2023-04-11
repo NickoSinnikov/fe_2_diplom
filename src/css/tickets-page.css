@@ -18,6 +18,7 @@
 }
 .train-content__block {
   display: flex;
+  align-items: flex-start;
 }
 .trains__block {
   width: 70%;

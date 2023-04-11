@@ -10,14 +10,7 @@ export const fetchSeats = createAsyncThunk(
     const id = train.departure._id;
     const url = `https://netology-trainbooking.netoservices.ru/routes/${id}/seats`;
 
-    // const { date_start, date_end } = getState().search;
-    // let options = '?';
-    // for (const key in filter) {
-    //    if (typeof filter[key] === 'boolean' && filter[key]) {
-    //       options += `${key}=${filter[key]}&`;
-    //    }
-    // }
-    // url += options;
+    
 
     try {
       const response = await fetch(url);

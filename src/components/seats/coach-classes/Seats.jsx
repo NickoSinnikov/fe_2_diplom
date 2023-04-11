@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Seat from '../Seat';
 
 export default function SeatClass({ id, seatsList, typeTicket }) {

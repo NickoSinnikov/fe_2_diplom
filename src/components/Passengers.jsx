@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { BrowserRouter as Router, Route, Routes,useNavigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useNavigate,
+} from "react-router-dom";
 import PassengerPage from "./Passengers/PassengersPage";
 import SearchFormDirection from "./Forms/SearchFormDirection";
 import SearchFormDate from "./Forms/SearchFormDate";
 import Button from "./Button";
 import { fetchRoutes } from "../Slice/routeSlice";
-import PayForm from "./Forms/PayForm"
+import PayForm from "./Forms/PayForm";
 import VerificationPage from "./Passengers/VerificationPage";
-
-// import './Passengers.css';
-
-// import { stageChange } from '../Slice/stageSlice';
-
 import PassengerAside from "./Aside/PassengerAside";
+import StageBar from "./StageBar";
 
 export default function Passengers() {
   const dispatch = useDispatch();
@@ -37,14 +38,15 @@ export default function Passengers() {
               Найти билеты
             </Button>
           </form>
+          <StageBar />
         </div>
       </section>
       <div className="container train-content__block">
         <PassengerAside />
         <Routes>
           <Route path="/passengers" element={<PassengerPage />} />
-          <Route path="/pay" element={<PayForm/>}/>
-        <Route path="/verification" element={<VerificationPage/>}/> 
+          <Route path="/pay" element={<PayForm />} />
+          <Route path="/verification" element={<VerificationPage />} />
         </Routes>
       </div>
     </main>

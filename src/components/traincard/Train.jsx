@@ -5,13 +5,12 @@ import { useNavigate } from "react-router";
 import { fetchSeats, trainAdd } from "../../Slice/seatsSlice";
 import { useDispatch } from "react-redux";
 export default function Train(route, type) {
-  // const train = props;
-  // const {departure} = props;
+ 
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { train, option } = route;
   const { departure, arrival } = train;
-  //console.log(departure);
+
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -30,13 +29,16 @@ export default function Train(route, type) {
         </div>
         <div className="train-card__number">{departure.train.name}</div>
         <div className="train-card__rote">
-          <span className="train-card__rote-start">
+          {/* <span className="train-card__rote-start">
             Адлер<span> &#8594;</span>
+          </span> */}
+          <span className="train-card__rote-text">
+            {departure.from.city.name}
+            <span> &#8594;</span>
           </span>
-          <span className="train-card__rote-from">
-            Москва<span> &#8594;</span>
+          <span className="train-card__rote-text">
+            {departure.to.city.name}
           </span>
-          <span className="train-card__rote-to">Санкт-Петербург</span>
         </div>
       </div>
       <div
@@ -44,7 +46,7 @@ export default function Train(route, type) {
       train-card__main"
       >
         <ul className="train-card__directions">
-          <TrainCardDirection />
+          <TrainCardDirection departure={departure} />
         </ul>
         <div className="train-card__type">
           <TrainCardType departure={departure} />

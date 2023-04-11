@@ -1,6 +1,5 @@
 .App-header {
   width: 100%;
-
   background-position: center;
   position: absolute;
 	top:0;
@@ -28,7 +27,7 @@
 
 .menu__item {
   margin-right: 84px;
-  
+
 }
 .menu__item a{
   color: white;

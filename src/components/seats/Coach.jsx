@@ -3,13 +3,12 @@ import PropTypes from "prop-types";
 import { useSelector, useDispatch } from "react-redux";
 import { passengersPriceChange } from "../../Slice/passengersSlice";
 //import './Coach.css';
-//import rub from '../../../img/tickets/tickets-rub.svg';
-import LuxClass from './coach-classes/Lux';
-import KupeClass from './coach-classes/Kupe';
-import PlatskartClass from './coach-classes/Platskart';
-import SeatsClass from './coach-classes/Seats';
- import Price from './Price';
-//import Service from './Service';
+import rub from "../../img/Rub.svg";
+import LuxClass from "./coach-classes/Lux";
+import KupeClass from "./coach-classes/Kupe";
+import PlatskartClass from "./coach-classes/Platskart";
+import SeatsClass from "./coach-classes/Seats";
+import Price from "./Price";
 
 export default function Coach({ coach, seatsList, typeTicket }) {
   const { seats, services } = useSelector((state) => state.seats[typeTicket]);
@@ -160,18 +159,18 @@ export default function Coach({ coach, seatsList, typeTicket }) {
           <h5 className="coach-info-title">Стоимость</h5>
           {!type.lux && (
             <p className="coach-info-text">
-             <Price title="coach-info" value={coach.top_price} /> 
-              <img className="coach-ticket-сurrency" src="{rub}" alt="руб." />
+              <Price title="coach-info" value={coach.top_price} />
+              <img className="coach-ticket-сurrency" src={rub} alt="руб." />
             </p>
           )}
           <p className="coach-info-text">
-             <Price title="coach-info" value={coach.bottom_price} /> 
-            <img className="coach-ticket-сurrency" src="{rub}" alt="руб." />
+            <Price title="coach-info" value={coach.bottom_price} />
+            <img className="coach-ticket-сurrency" src={rub} alt="руб." />
           </p>
           {type.platzcart && (
             <p className="coach-info-text">
-              <Price title="coach-info" value={coach.side_price} /> 
-              <img className="coach-ticket-сurrency" src="{rub}" alt="руб." />
+              <Price title="coach-info" value={coach.side_price} />
+              <img className="coach-ticket-сurrency" src={rub} alt="руб." />
             </p>
           )}
         </div>
@@ -229,16 +228,13 @@ export default function Coach({ coach, seatsList, typeTicket }) {
             seatsList={seatsList}
             typeTicket={typeTicket}
           />
-        )} 
+        )}
       </div>
       <div className="coach-total">
         {child + adult + service > 0 && (
           <p className="coach-total-text">
-            <Price
-                     title="coach-total"
-                     value={child + adult + service}
-                  /> 
-            <img className="coach-total-сurrency" src="{rub}" alt="руб." />
+            <Price title="coach-total" value={child + adult + service} />
+            <img className="coach-total-сurrency" src={rub} alt="руб." />
           </p>
         )}
       </div>

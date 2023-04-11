@@ -8,7 +8,7 @@ import SeatsMap from "./seats/SeatsMap";
 export default function SeatsPage() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  //console.log(useSelector((state) => state.seats));
+
   const { train } = useSelector((state) => state.seats.train);
   const seatsDeparture = useSelector(
     (state) => state.seats.departure.seatsCount
@@ -17,7 +17,7 @@ export default function SeatsPage() {
   const { passengersCount } = useSelector((state) => state.passengers);
 
   useEffect(() => {
-    //dispatch(passengersPriceClear());
+    dispatch(passengersPriceClear());
     dispatch(fetchSeats("departure"));
     if (train.arrival) dispatch(fetchSeats("arrival"));
   }, [dispatch]);

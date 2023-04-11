@@ -1,6 +1,6 @@
 export default function TrainCardType(props) {
   const departure = props.departure;
-  const { seats } = departure.available_seats_info;
+
 
   return (
     <ul

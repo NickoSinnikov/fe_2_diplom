@@ -1,8 +1,13 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import routeTo from "../../img/roadTo.svg";
+import routeBack from "../../img/roadFrom.svg";
+import seats from "../../img/Seats.svg";
+import platskart from "../../img/Platskart.svg";
+import coupe from "../../img/Coupe.svg";
+import lux from "../../img/Lux.svg";
 
-//import { routeTo, routeBack, seat, platzcart, kupe, lux } from "../svg";
 import { passengersCountChange } from "../../Slice/passengersSlice";
 import {
   coachClassChange,
@@ -10,7 +15,7 @@ import {
   coachItemsUnSelect,
   coachItemsClear,
 } from "../../Slice/seatsSlice";
-//import "./Ticket.css";
+
 import Train from "../traincard/Train";
 import Coach from "./Coach";
 
@@ -40,22 +45,22 @@ export default function SeatsMap({ type }) {
   const classes = {
     fourth: {
       available: train[type].have_fourth_class === true,
-      //icon: seat,
+      icon: seats,
       name: "Сидячий",
     },
     third: {
       available: train[type].have_third_class === true,
-      //icon: platzcart,
+      icon: platskart,
       name: "Платцкарт",
     },
     second: {
       available: train[type].have_second_class === true,
-      //icon: kupe,
+      icon: coupe,
       name: "Купе",
     },
     first: {
       available: train[type].have_first_class === true,
-      // icon: lux,
+      icon: lux,
       name: "Люкс",
     },
   };
@@ -90,10 +95,10 @@ export default function SeatsMap({ type }) {
       <div className="ticket_header ticket_header--route--there">
         <div
           className={`ticket_header-actions ${
-            type === "departure" ? "" : "routeBack"
+            type === "departure" ? "routeTo" : "routeBack"
           }`}
         >
-          {type === "departure" ? "routeTo" : "routeBack"}
+          <img src={type === "departure" ? routeTo : routeBack} />
           <button
             type="button"
             className="button ticket_header-button"
@@ -196,7 +201,7 @@ export default function SeatsMap({ type }) {
                   disabled={!classes[el].available}
                   onClick={() => handleClick(el)}
                 >
-                  {classes[el].icon}
+                  <img src={classes[el].icon} />
                   <p className="ticket_class-name">{classes[el].name}</p>
                 </button>
               </li>

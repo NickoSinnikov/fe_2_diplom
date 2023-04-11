@@ -1,6 +1,8 @@
 .passengers {
     /* position: relative; */
     display: flex;
+    flex-direction: column
+    ;
  }
 
  .passengers_button {
@@ -81,7 +83,7 @@
     display: flex;
     align-items: center;
  }
- 
+
 
  .passenger_title {
     font-weight: 400;
@@ -160,14 +162,14 @@
     /* background-image: url('../../../img/form/select.svg'); */
     background-repeat: no-repeat;
     background-position: right 22px center;
-    
+
 
     background-color: inherit;
  }
  .passengerForm-list::-ms-expand {
     display: none;
  }
- 
+
 
  .passengerForm-controls {
     border-top: none;

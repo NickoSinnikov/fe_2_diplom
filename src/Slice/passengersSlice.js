@@ -54,6 +54,7 @@ const passengersSlice = createSlice({
           services: 0,
         },
       };
+      localStorage.removeItem("passengersPrice");
     },
 
     addPassengersData: (state, action) => {
@@ -70,7 +71,7 @@ const passengersSlice = createSlice({
     },
     clearPassengersData: (state) => {
       state.passengers = [];
-      localStorage.setItem("passengers", JSON.stringify([]));
+      localStorage.clear();
     },
   },
 });
