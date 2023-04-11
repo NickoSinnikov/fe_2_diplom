@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/sta6g1ermni2br2o?svg=true)](https://ci.appveyor.com/project/NickoSinnikov/fe-2-diplom)
+
 # Дипломная работа к профессии Frontend-разработчик «Система бронирования ж/д билетов»
 
 ### Краткое описание задачи дипломной работы
