@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-// import InputRange from "react-input-range";
-//import { useSelector, useDispatch } from "react-redux";
+
 
 export default function TimeFilter() {
   const [isHidden, setHidden] = useState({

@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/react-in-jsx-scope */
 import React, { useEffect, useState } from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { passengersPriceChange } from '../../Slice/passengersSlice';
-//import './Coach.css';
 import rub from '../../img/Rub.svg';
 import LuxClass from './coach-classes/Lux';
 import KupeClass from './coach-classes/Kupe';

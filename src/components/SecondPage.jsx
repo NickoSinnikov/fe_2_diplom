@@ -1,5 +1,5 @@
+import React from "react";
 import Aside from "./Aside/Aside";
-import TrainBlock from "./TrainBlock";
 import "../css/tickets-page.css";
 import SearchFormDirection from "./Forms/SearchFormDirection";
 import SearchFormDate from "./Forms/SearchFormDate";

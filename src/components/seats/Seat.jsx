@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/react-in-jsx-scope */
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { seatsItemSelect, seatsItemUnSelect } from '../../Slice/seatsSlice';

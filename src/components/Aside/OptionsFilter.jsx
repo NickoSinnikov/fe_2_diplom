@@ -1,3 +1,4 @@
+import React from 'react';
 import Options from "./Options";
 import Coupe from "../../img/Coupe-min.svg";
 import Seat from "../../img/Seat.svg";

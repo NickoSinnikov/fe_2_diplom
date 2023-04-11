@@ -1,3 +1,4 @@
+import React from 'react';
 import "../../css/aside.css";
 import DataFilter from "./DataFilter";
 import OptionsFilter from "./OptionsFilter";
@@ -10,7 +11,7 @@ export default function Aside(){
             <DataFilter/>
             <OptionsFilter/>
             <PriceFilter/>
-            <TimeFilter/> 
+            <TimeFilter/>
         </aside>
     )
 }
