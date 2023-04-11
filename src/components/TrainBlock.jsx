@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Train from "./traincard/Train";
-import { useEffect } from "react";
 import { stageChange } from "../Slice/stageSlice";
 
 export default function TrainMainBlock() {

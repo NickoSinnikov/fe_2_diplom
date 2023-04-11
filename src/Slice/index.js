@@ -10,7 +10,7 @@ import bookingSlice from "./bookingSlice";
 import filterSlice from "./filterSlice";
 import stageSlice from "./stageSlice";
 
-export const store = configureStore({
+export default  configureStore({
   reducer: {
     search: searchReducer,
     routes: routeSlice,

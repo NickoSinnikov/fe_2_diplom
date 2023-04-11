@@ -4,6 +4,7 @@
 /* eslint-disable camelcase */
 /* eslint-disable no-restricted-syntax */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+
 export const fetchRoutes = createAsyncThunk(
   'routes/fetchRoutes',
   async (_, { rejectWithValue, getState }) => {

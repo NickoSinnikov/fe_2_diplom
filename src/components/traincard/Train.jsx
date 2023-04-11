@@ -1,11 +1,13 @@
 /* eslint-disable react/react-in-jsx-scope */
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router';
 import TrainCardDirection from './TrainCardDirection';
 import TrainCardType from './TrainCardType';
 import trainImg from '../../img/Train.svg';
-import { useNavigate } from 'react-router';
 import { fetchSeats, trainAdd } from '../../Slice/seatsSlice';
-import { useDispatch } from 'react-redux';
+
+
 export default function Train(route, type) {
    const navigate = useNavigate();
    const dispatch = useDispatch();
@@ -25,7 +27,7 @@ export default function Train(route, type) {
       >
          <div className="train-card__aside">
             <div className="train-card__image">
-               <img src={trainImg} />{' '}
+               <img src={trainImg} alt="alt"/>{' '}
             </div>
             <div className="train-card__number">{departure.train.name}</div>
             <div className="train-card__rote">
@@ -50,7 +52,7 @@ export default function Train(route, type) {
             </ul>
             <div className="train-card__type">
                <TrainCardType departure={departure} />
-               <button onClick={handleClick} className="train-card__btn">
+               <button tupe="button" onClick={handleClick} className="train-card__btn">
                   Выбрать места
                </button>
             </div>

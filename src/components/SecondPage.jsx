@@ -1,11 +1,7 @@
 import React from "react";
-import Aside from "./Aside/Aside";
-import "../css/tickets-page.css";
+
 import SearchFormDirection from "./Forms/SearchFormDirection";
 import SearchFormDate from "./Forms/SearchFormDate";
-import Button from "./Button";
-import { fetchRoutes } from "../Slice/routeSlice";
-
 import { useDispatch, useSelector } from "react-redux";
 import {
   BrowserRouter as Router,
@@ -16,6 +12,9 @@ import {
 import TrainPage from "./TrainPage";
 import SeatsPage from "./SeatsPage";
 import StageBar from "./StageBar";
+import Aside from "./Aside/Aside";
+import Button from "./Button";
+import { fetchRoutes } from "../Slice/routeSlice";
 
 export default function SecondPage() {
   const dispatch = useDispatch();

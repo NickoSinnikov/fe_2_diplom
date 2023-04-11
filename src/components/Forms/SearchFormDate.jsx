@@ -1,10 +1,12 @@
+/* eslint-disable react/prop-types */
 import React, { forwardRef, useEffect, useState } from "react";
+import ru from "date-fns/locale/ru";
 import Label from "../homepage/Label";
 import { useDispatch, useSelector } from "react-redux";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { searchHandleChange } from "../../Slice/SearchSlice";
-import ru from "date-fns/locale/ru";
+
 
 export default function SearchFormDate(formView) {
   const dispatch = useDispatch();

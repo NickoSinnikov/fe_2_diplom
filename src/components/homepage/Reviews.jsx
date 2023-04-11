@@ -1,4 +1,5 @@
 import React from 'react';
+
 export default function Reviews() {
    return (
       <section id="reviews" className="section__reviews">
@@ -7,7 +8,7 @@ export default function Reviews() {
             <ul className="reviews">
                <li className="review">
                   <div className="review__image">
-                     <img src="" />
+                     <img src="" alt="alt"/>
                   </div>
                   <div className="review__content">
                      <h4 className="review__author">Екатерина Вальнова</h4>
@@ -22,7 +23,7 @@ export default function Reviews() {
                </li>
                <li className="review">
                   <div className="review__image">
-                     <img src="" />
+                     <img src="" alt="alt"/>
                   </div>
                   <div className="review__content">
                      <h4 className="review__author">Евгений Стрыкало</h4>

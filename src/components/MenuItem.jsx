@@ -1,8 +1,10 @@
 import React from 'react';
+
 export default function MenuItem(props) {
+   const {href, children} = props;
    return (
       <li className="menu__item">
-         <a href={props.href}>{props.children}</a>
+         <a href={href}>{children}</a>
       </li>
    );
 }

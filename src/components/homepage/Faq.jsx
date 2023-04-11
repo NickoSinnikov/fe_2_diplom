@@ -11,7 +11,7 @@ export default function Faq() {
                <h2 className="section__title section__title-white">
                   Как это работает
                </h2>
-               <button className="section__button working__btn">
+               <button type="button" className="section__button working__btn">
                   Узнать больше
                </button>
             </div>
@@ -19,13 +19,13 @@ export default function Faq() {
             <ul className="working__list">
                <li className="list__item">
                   <div className="item__image">
-                     <img src={firstImg} />
+                     <img src={firstImg} alt="alt" />
                   </div>
                   <div className="item__text">Удобный заказ на сайте</div>
                </li>
                <li className="list__item">
                   <div className="item__image">
-                     <img src={secondImg} />
+                     <img src={secondImg} alt="alt"/>
                   </div>
                   <div className="item__text">
                      Нет необходимости ехать в офис
@@ -33,7 +33,7 @@ export default function Faq() {
                </li>
                <li className="list__item">
                   <div className="item__image">
-                     <img src={thirdImg} />
+                     <img src={thirdImg} alt="alt"/>
                   </div>
                   <div className="item__text">Огромный выбор направлений</div>
                </li>

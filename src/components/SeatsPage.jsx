@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import { fetchSeats, trainAdd } from "../Slice/seatsSlice";
-import passengersPriceClear from "../Slice/passengersSlice";
+import {passengersPriceClear} from "../Slice/passengersSlice";
 import SeatsMap from "./seats/SeatsMap";
 
 export default function SeatsPage() {

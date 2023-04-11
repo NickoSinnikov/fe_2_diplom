@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-underscore-dangle */
 import React from "react";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -32,7 +34,7 @@ export default function InputCities(props) {
   /* Скрытие выпадающего списка городов */
   const onVisible = (event) => {
     event.preventDefault();
-    setTimeout(() => setVisible(false), 200); //нужна задержка, т.к. при список исчезает при потере фокуса на inpute и клик не срабатывает
+    setTimeout(() => setVisible(false), 200); 
   };
 
   /* Изменение данных в reducer */

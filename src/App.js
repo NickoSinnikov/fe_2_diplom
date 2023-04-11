@@ -12,6 +12,7 @@ import './css/pay-form.css';
 import './css/verification.css';
 import './css/success.css';
 import './css/stage-bar.css';
+import "./css/tickets-page.css";
 import Header from './components/homepage/Header';
 import Footer from './components/homepage/Footer';
 import HomePage from './components/HomePage';

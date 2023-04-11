@@ -1,9 +1,9 @@
-import React from 'react';
+/* eslint-disable react/prop-types */
 import Slider from '@mui/material/Slider';
-import { useState } from 'react';
+import React,{ useState } from 'react';
 
 export default function PriceFilter() {
-   function valuetext(value) {
+   function valueText(value) {
       return `${value}`;
    }
    const minDistance = 10;
@@ -42,7 +42,7 @@ export default function PriceFilter() {
    };
    return (
       <div className="price-filter">
-         <div class="slidercontainer">
+         <div className="slidercontainer">
             <p className="price-filter__text">
                <span>от</span>
                <span>до</span>
@@ -52,7 +52,7 @@ export default function PriceFilter() {
                value={value1}
                onChange={handleChange1}
                valueLabelDisplay="auto"
-               getAriaValueText={valuetext}
+               getAriaValueText={valueText}
                disableSwap
             />
          </div>
