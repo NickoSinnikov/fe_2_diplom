@@ -17,6 +17,12 @@
    border-bottom: 1px solid white;
 }
 
+.filter-title {
+   margin-left: 10px;
+   font-weight: 400;
+   font-size: 26px;
+}
+
 /** Options filter */
 
 .options-filter__item {
@@ -71,44 +77,12 @@
 .time-filter {
    width: 100%;
 }
-
-.time-filter_header {
-   display: flex;
-   justify-content: space-between;
-}
-
-.time-filter_button {
-   width: 15px;
-   height: 15px;
-   align-self: center;
-   border: 2px solid grey;
-   border-radius: 4px;
-   background-color: inherit;
-
-   color: white;
-
-   font-size: 18px;
-
-   position: relative;
-}
-
-.time-filter_button p {
-   margin: 0;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   margin-right: -50%;
-   transform: translate(-50%, -50%);
-}
-
-.time-filter_button:hover {
-   border-color: orange;
-}
-
 .hidden {
    display: none;
 }
-
+.time-filter_title {
+   font-size: 18px;
+}
 /* PassangerAside */
 .aside__block {
    display: flex;
@@ -132,6 +106,7 @@
    margin-bottom: 20px;
    font-weight: bold;
    font-size: 18px;
+   align-items: center;
 }
 
 .aside__block-info {

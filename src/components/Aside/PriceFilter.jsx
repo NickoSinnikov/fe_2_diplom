@@ -1,14 +1,17 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-no-bind */
+/* eslint-disable camelcase */
 import Slider from '@mui/material/Slider';
-import React,{ useState } from 'react';
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { filterChange } from '../../Slice/filterSlice';
 
 export default function PriceFilter() {
-   function valueText(value) {
-      return `${value}`;
-   }
+   const dispatch = useDispatch();
+   const { price_from, price_to } = useSelector((state) => state.filter);
+
    const minDistance = 10;
-   const [value1, setValue1] = useState([20, 37]);
+   const [value1, setValue1] = useState([price_from, price_to]);
 
    const handleChange1 = (event, newValue, activeThumb) => {
       if (!Array.isArray(newValue)) {
@@ -20,29 +23,14 @@ export default function PriceFilter() {
       } else {
          setValue1([value1[0], Math.max(newValue[1], value1[0] + minDistance)]);
       }
+      dispatch(filterChange({ name: 'price_from', value: value1[0] }));
+
+      dispatch(filterChange({ name: 'price_to', value: value1[1] }));
    };
 
-   const [value2, setValue2] = useState([20, 37]);
-
-   const handleChange2 = (event, newValue, activeThumb) => {
-      if (!Array.isArray(newValue)) {
-         return;
-      }
-
-      if (newValue[1] - newValue[0] < minDistance) {
-         if (activeThumb === 0) {
-            const clamped = Math.min(newValue[0], 100 - minDistance);
-            setValue2([clamped, clamped + minDistance]);
-         } else {
-            const clamped = Math.max(newValue[1], minDistance);
-            setValue2([clamped - minDistance, clamped]);
-         }
-      } else {
-         setValue2(newValue);
-      }
-   };
    return (
-      <div className="price-filter">
+      <div className="price-filter aside-item">
+         <div className="filter-title">Стоимость</div>
          <div className="slidercontainer">
             <p className="price-filter__text">
                <span>от</span>
@@ -52,7 +40,9 @@ export default function PriceFilter() {
                getAriaLabel={() => 'Minimum distance'}
                value={value1}
                onChange={handleChange1}
-               valueLabelDisplay="auto"
+               valueLabelDisplay="on"
+               max={7000}
+               min={0}
                // getAriaValueText={valueText}
                disableSwap
             />
