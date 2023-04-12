@@ -1,14 +1,14 @@
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable react/prop-types */
-import React, { useEffect } from "react";
+import React, { useEffect, useState} from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import routeTo from "../../img/roadTo.svg";
 import routeBack from "../../img/roadFrom.svg";
-import seats from "../../img/Seats.svg";
-import platskart from "../../img/Platskart.svg";
-import coupe from "../../img/Coupe.svg";
-import lux from "../../img/Lux.svg";
+// import seats from "../../img/Seats.svg";
+// import platskart from "../../img/Platskart.svg";
+// import coupe from "../../img/Coupe.svg";
+// import lux from "../../img/Lux.svg";
 
 import { passengersCountChange } from "../../Slice/passengersSlice";
 import {
@@ -21,12 +21,14 @@ import {
 import TicketTrain from "../traincard/TicketTrain";
 import Coach from "./Coach";
 
+
 export default function SeatsMap({ type }) {
+  
   const { train } = useSelector((state) => state.seats.train);
   const { coachList, coachClass, coachItems } = useSelector(
     (state) => state.seats[type]
   );
-
+ 
   const { passengersCount } = useSelector((state) => state.passengers);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -47,22 +49,22 @@ export default function SeatsMap({ type }) {
   const classes = {
     fourth: {
       available: train[type].have_fourth_class === true,
-      icon: seats,
+      // icon: seats,
       name: "Сидячий",
     },
     third: {
       available: train[type].have_third_class === true,
-      icon: platskart,
+      // icon: platskart,
       name: "Платцкарт",
     },
     second: {
       available: train[type].have_second_class === true,
-      icon: coupe,
+      // icon: coupe,
       name: "Купе",
     },
     first: {
       available: train[type].have_first_class === true,
-      icon: lux,
+      // icon: lux,
       name: "Люкс",
     },
   };
@@ -77,6 +79,7 @@ export default function SeatsMap({ type }) {
   const handleClick = (classType) => {
     dispatch(coachClassChange({ coachClass: classType, type }));
     dispatch(coachItemsClear({ type }));
+     
   };
 
   const handleCoachClick = (id) => {
@@ -200,10 +203,13 @@ export default function SeatsMap({ type }) {
                   className={`ticket_class-button ${
                     coachClass === el ? "ticket_class-button--active" : ""
                   }`}
+    
                   disabled={!classes[el].available}
                   onClick={() => handleClick(el)}
                 >
-                  <img src={classes[el].icon} alt="alt"/>
+                  <div className={`ticket__class-icon ticket__class-icon-${el}${
+                    coachClass === el ? "-active" : ""
+                  }`}/>
                   <p className="ticket_class-name">{classes[el].name}</p>
                 </button>
               </li>

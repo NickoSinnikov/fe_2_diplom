@@ -204,6 +204,7 @@ margin-left: 10px;
   list-style-type: none;
   display: flex;
   justify-content: center;
+  margin-top: 30px;
 }
 
 .ticket_class-item {
@@ -219,10 +220,33 @@ margin-left: 10px;
 .ticket_class-button {
   border: 0;
   background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .ticket__class-icon {
+  width: 40px;
+  height: 40px;
   fill: #c4c4c4;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+}
+
+.ticket__class-icon-first{
+  background-image: url("../img/Lux.svg");
+}
+.ticket__class-icon-second{background-image: url("../img/Coupe.svg");}
+.ticket__class-icon-third{background-image: url("../img/Platskart.svg");}
+.ticket__class-icon-fourth{background-image: url("../img/Seats.svg");}
+
+.ticket__class-icon-second-active{background-image: url("../img/Coupe-yel.svg");}
+.ticket__class-icon-third-active{background-image: url("../img/Platskart-yel.svg");}
+.ticket__class-icon-fourth-active{background-image: url("../img/Seats-yel.svg");}
+.ticket__class-icon-first-active{
+  background-image: url("../img/Lux-yel.svg");
 }
 
 .ticket_class-name {
@@ -454,20 +478,20 @@ font-weight: bold;
   color: #292929;
 }
 
-/* .coach-seats-list--platzcart {
-   background-image: url('../../../img/classes/platzcart.png');
+.coach-seats-list--platzcart {
+   background-image: url('../img/Platskart.svg');
 }
 
 .coach-seats-list--kupe {
-   background-image: url('../../../img/classes/kupe.png');
+   background-image: url('../img/Coupe.svg');
 }
 
 .coach-seats-list--lux {
-   background-image: url('../../../img/classes/lux.png');
+   background-image: url('../img/Lux.svg');
 }
 
 .coach-seats-list--seat {
-   background-image: url('../../../img/classes/seat.png');
+   background-image: url('../img/Seats.svg');
 } */
 
 .coach-seat {
