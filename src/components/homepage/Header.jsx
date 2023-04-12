@@ -1,6 +1,8 @@
 import React from "react";
+
 import MenuItem from '../MenuItem';
 import Logo from "./Logo";
+
 
 
 export default function Header() {
@@ -11,16 +13,16 @@ export default function Header() {
       </div>
       <div className="header__menu">
         <ul className="menu__list container">
-          <MenuItem  href="#about">
+          <MenuItem  href="/#about">
             О нас
           </MenuItem>
-          <MenuItem  href="#working">
+          <MenuItem  href="/#working">
             Как это работает
           </MenuItem>
-          <MenuItem  href="#reviews">
+          <MenuItem  href="/#reviews">
             Отзывы
           </MenuItem>
-          <MenuItem  href="#contacts">
+          <MenuItem  href="/#contacts">
             Контакты
           </MenuItem>
         </ul>

@@ -41,7 +41,7 @@ export default function Verification() {
   };
 
   return (
-    <section className="verification order_verification">
+    <section className="verification order_verification content__block">
       <div className="verification-section">
         <h4 className="title verification-title">Поезд</h4>
         <Train key={nanoid()} train={train} option="verification" />

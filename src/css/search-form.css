@@ -43,7 +43,9 @@
   margin-top: 10px;
   /* margin-bottom: 50px; */
 }
-
+.input-block > div{
+  width: 240px;
+}
 .form__lable {
   font-family: "Roboto";
   color: rgb(255, 255, 255);

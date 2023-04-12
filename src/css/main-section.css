@@ -145,7 +145,7 @@
 .review__image {
   min-width: 160px;
   height: 160px;
-  border-radius: 1px;
+  border-radius: 50%;
   border: solid 1px black;
   margin-right: 15px;
 }
