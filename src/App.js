@@ -27,6 +27,7 @@ function App() {
          <Router>
             <Header />
             <Routes>
+               <Route path="/fe_2_diplom" element={<HomePage />} />
                <Route path="/" element={<HomePage />} />
                <Route path="/tickets/*" element={<SecondPage />} />
                <Route path="/passengers/*" element={<Passengers />} />
