@@ -27,7 +27,7 @@
 
 .options-filter__item {
    display: flex;
-   justify-content: left;
+   justify-content: space-between;
 }
 
 .date-form__label {
