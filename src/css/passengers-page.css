@@ -313,7 +313,7 @@
  .passengerForm-footer {
     box-sizing: border-box;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     min-height: 126px;
  }
