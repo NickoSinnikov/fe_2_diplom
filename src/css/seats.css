@@ -473,7 +473,7 @@
    width: 100%;
    height: 145px;
    background-repeat: no-repeat;
-   background-size: cover;
+   background-size: contain;
 }
 
 .coach-demand {
@@ -491,27 +491,27 @@
 }
 
 .coach-seats-list--platzcart {
-   background-image: url('../img/Platskart.svg');
+   background-image: url('../img/Platskart-img.png');
 }
 
 .coach-seats-list--kupe {
-   background-image: url('../img/Coupe.svg');
+   background-image: url('../img/Coupe-img.png');
 }
 
-.coach-seats-list--lux {
-   background-image: url('../img/Lux.svg');
-}
+/* .coach-seats-list--lux {
+   background-image: url('../img/Lux-img.png');
+} */
 
-.coach-seats-list--seat {
-   background-image: url('../img/Seats.svg');
-}
+/* .coach-seats-list--seat {
+   background-image: url('../img/Seats-img.png');
+} */
 .coach-seat {
    position: absolute;
    display: flex;
    justify-content: center;
    align-items: center;
    border: 0;
-   background-color: #f2f2f2;
+   background-color: #F3F3F3;
 }
 
 .coach-seat--active {
@@ -525,13 +525,15 @@
 }
 
 .coach-seat--top {
-   width: 27px;
-   height: 30px;
+   width: 22px;
+   height: 27px;
+   
 }
 
 .coach-seat--bottom {
-   width: 43px;
-   height: 24px;
+   width: 36px;
+   height: 21px;
+   
 }
 
 .coach-seat--lux {
@@ -540,7 +542,7 @@
 }
 
 .coach-seat--single {
-   width: 27px;
+   width: 21px;
    height: 19px;
 }
 

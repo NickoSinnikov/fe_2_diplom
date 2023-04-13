@@ -1,5 +1,5 @@
 .stageBar {
-  z-index: 1;
+  z-index: -1;
   position: relative;
 }
 
@@ -54,7 +54,7 @@
   padding-left: 0;
 }
 
-/* .activ::before {
+ /* .activ::before {
   z-index: 3;
   content: "";
   position: absolute;
@@ -66,7 +66,7 @@
   border-top: 49px solid transparent;
   border-left: 37px solid #ffa800;
   border-bottom: 49px solid transparent;
-} */
+}  */
 
 .passed {
   background: #ffa800;

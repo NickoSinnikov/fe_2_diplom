@@ -18,6 +18,7 @@ body {
   font-family: "Roboto";
 
   font-size: 30px;
+  background-color: #F7F5F9;
 }
 
 li {
@@ -48,4 +49,17 @@ button {
 .App {
   display: flex;
   flex-direction: column;
+}
+
+.content__section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  margin-top: 50px;
+}
+
+
+.content__block{
+  width: 70%;
 }

@@ -25,7 +25,7 @@ export default function PassangerAside() {
    };
 
    return (
-      <aside className="aside">
+      <aside className="aside aside__passengers">
          <h5 className="aside__title">Детали поездки</h5>
          <div className="aside-route-to aside-item aside__block">
             <div className="aside__block-title ">

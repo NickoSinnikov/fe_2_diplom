@@ -1,12 +1,23 @@
-.aside {
+.aside{
    width: 25%;
+   display: flex;
+   flex-direction: column;
+}
+
+.aside__filter {
+   width: 100%;
    display: flex;
    flex-direction: column;
 
    align-items: flex-start;
-
+margin-bottom: 70px;
    border-radius: 5px;
 
+   background-color: #3e3c41;
+   color: white;
+}
+
+.aside__passengers{
    background-color: #3e3c41;
    color: white;
 }
@@ -194,4 +205,60 @@
 
 .active-button {
    background-image: url('../img/btn-act.svg');
+}
+
+
+.last-tickets__title{
+   margin-bottom: 20px;
+}
+.last-ticket{
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 20px;
+padding: 15px 20px 15px 20px;
+   border: 1px solid #C4C4C4;
+   background-color: white;
+   
+}
+
+.last-ticket__header{
+   display: flex;
+   justify-content: space-between;
+}
+.last-ticket__title-from{
+   align-items : flex-start;
+}
+
+.last-ticket__title-to{
+   align-items: flex-end;
+}
+.last-ticket__title-from, .last-ticket__title-to{
+   display: flex;
+   flex-direction: column;
+}
+.last-ticket__title{
+   font-size: 20px;
+   text-transform: capitalize;
+}
+.last-ticket__title-to .last-ticket__subtitle{
+   text-align: right;
+}
+.last-ticket__subtitle{
+   font-size: 16px;
+   color: #928F94;
+}
+
+.last-ticket__info{
+   margin-top: 20px;
+   display: flex;
+   justify-content: right;
+}
+.last_ticket-price{
+   font-size: 16px;
+   color: #928F94;
+}
+.last-ticket__price-value{
+   color: #ffa800;
+   font-size: 30px;
+   font-weight: bold;
 }

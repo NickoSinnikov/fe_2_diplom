@@ -25,17 +25,17 @@ export default function Seat({
 
    if (type === 'top') {
       if (number % 2 === 0) {
-         style.top = '30px';
+         style.top = '24px';
       } else {
-         style.top = '60px';
+         style.top = '50px';
       }
    } else if (type === 'bottom') {
-      style.top = '113px';
+      style.top = '95px';
    } else if (type === 'lux') {
       style.top = '29px';
    } else if (number < 33) {
       if (number % 2 === 0) {
-         style.top = '33px';
+         style.top = '28px';
       } else {
          style.top = '54px';
       }

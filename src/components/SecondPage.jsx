@@ -37,9 +37,10 @@ export default function SecondPage() {
               Найти билеты
             </Button>
           </form>
-          <StageBar />
+          
         </div>
       </section>
+      <StageBar />
 
       <section className="container content__section">
         <Aside />

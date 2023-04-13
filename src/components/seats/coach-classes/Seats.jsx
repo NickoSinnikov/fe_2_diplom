@@ -4,11 +4,12 @@ import React from 'react';
 import Seat from '../Seat';
 
 export default function SeatClass({ id, seatsList, typeTicket }) {
+ 
    const seats = [
-      { number: 1, type: 'single', left: '143' },
-      { number: 2, type: 'single', left: '143' },
-      { number: 3, type: 'single', left: '190' },
-      { number: 4, type: 'single', left: '190' },
+      { number: 1, type: 'top', left: '121' },
+      { number: 2, type: 'top', left: '121' },
+      { number: 3, type: 'top', left: '160' },
+      { number: 4, type: 'top', left: '164' },
       { number: 5, type: 'single', left: '233' },
       { number: 6, type: 'single', left: '233' },
       { number: 7, type: 'single', left: '275' },
