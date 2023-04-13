@@ -25,24 +25,24 @@ export default function Seat({
 
    if (type === 'top') {
       if (number % 2 === 0) {
-         style.top = '24px';
+         style.top = '25px';
       } else {
-         style.top = '50px';
+         style.top = '52px';
       }
    } else if (type === 'bottom') {
       style.top = '95px';
    } else if (type === 'lux') {
-      style.top = '29px';
+      style.top = '24px';
    } else if (number < 33) {
       if (number % 2 === 0) {
          style.top = '28px';
       } else {
-         style.top = '54px';
+         style.top = '46px';
       }
    } else if (number === 62 || number % 2 !== 0) {
-      style.top = '113px';
+      style.top = '96px';
    } else {
-      style.top = '93px';
+      style.top = '79px';
    }
 
    const handleClick = () => {

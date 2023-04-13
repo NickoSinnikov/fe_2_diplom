@@ -498,20 +498,22 @@
    background-image: url('../img/Coupe-img.png');
 }
 
-/* .coach-seats-list--lux {
+.coach-seats-list--lux {
    background-image: url('../img/Lux-img.png');
-} */
+}
 
-/* .coach-seats-list--seat {
+.coach-seats-list--seat {
    background-image: url('../img/Seats-img.png');
-} */
+}
 .coach-seat {
    position: absolute;
    display: flex;
    justify-content: center;
    align-items: center;
    border: 0;
-   background-color: #F3F3F3;
+   background-color: #f3f3f3;
+   font-size: 11px;
+   font-weight: bold;
 }
 
 .coach-seat--active {
@@ -519,7 +521,7 @@
 }
 
 .coach-seat:disabled {
-   background-color: #cccccc;
+   background-color: #979797;
 
    color: #ffffff;
 }
@@ -527,23 +529,21 @@
 .coach-seat--top {
    width: 22px;
    height: 27px;
-   
 }
 
 .coach-seat--bottom {
    width: 36px;
    height: 21px;
-   
 }
 
 .coach-seat--lux {
-   width: 26px;
-   height: 59px;
+   width: 23px;
+   height: 50px;
 }
 
 .coach-seat--single {
-   width: 21px;
-   height: 19px;
+   width: 22px;
+   height: 15px;
 }
 
 .coach-total {

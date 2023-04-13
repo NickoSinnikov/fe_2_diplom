@@ -23,6 +23,8 @@ export default function SuccessBooking() {
       <main className="main success-main">
          <div className="success-wrapper "></div>
          <div className=" success-booking-wrapper container ">
+
+            <h3 className='success-title'>Благодарим вас за заказ!</h3>
             <div className="success-booking">
                <div className="success-booking_header">
                   <p className="success-booking_title">Заказ №285АА</p>
