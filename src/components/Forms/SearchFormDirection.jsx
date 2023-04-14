@@ -13,7 +13,7 @@ export default function SearchFormDirection(props) {
         </div>
         <Swap />
         <div className="input__block-in">
-          <InputCities placeholder="Куда" direction="routeIn" />
+          <InputCities placeholder="Куда" direction="routeTo" />
         </div>
       </div>
     </div>

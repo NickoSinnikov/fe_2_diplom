@@ -32,6 +32,7 @@
   border: none;
   border-radius: 3px;
   padding-left: 7px;
+  text-transform: capitalize;
 }
 
 .input-block {

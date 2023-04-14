@@ -10,8 +10,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   date_start: null,
   date_end: null,
-  routeFrom: null,
-  routeIn: null,
+  routeFrom: "санкт-петербург",
+  routeTo: "москва",
 };
 
 const searchSlice = createSlice({
@@ -25,8 +25,8 @@ const searchSlice = createSlice({
 
     cityExchange: (state) => {
       const from = state.routeFrom;
-      state.routeFrom = state.routeIn;
-      state.routeIn = from;
+      state.routeFrom = state.routeTo;
+      state.routeTo = from;
     },
   },
 });
