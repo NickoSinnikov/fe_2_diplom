@@ -1,31 +1,33 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-underscore-dangle */
+/* eslint-disable prefer-template */
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { searchHandleChange } from '../../Slice/SearchSlice';
 
 export default function InputCities(props) {
    const { direction, type, placeholder } = props;
-   const [value, setValue] = useState('');
-   const [visible, setVisible] = useState(false);
-   const [cities, setCities] = useState([]);
-   const dispatch = useDispatch();
-   const {routeFrom, routeTo} = useSelector((state) => state.search)
-   const route= direction ==='routeFrom' ? routeFrom.city : routeTo.city
 
+   const [visible, setVisible] = useState(false);
+
+   const dispatch = useDispatch();
+   const { routeFrom, routeTo } = useSelector((state) => state.search);
+   const route = direction === 'routeFrom' ? routeFrom.city : routeTo.city;
+   const [value, setValue] = useState(route);
+   const [cities, setCities] = useState(route);
    /* При вводе города отправляем на запрос на сервер для получения списка городов */
+
    useEffect(() => {
       setValue(route);
-      
-         fetch(
-            `https://netology-trainbooking.netoservices.ru/routes/cities?name=${route}`
-         )
-            .then((response) => response.json())
-            .then((data) => setCities(data))
+      fetch(
+         `https://netology-trainbooking.netoservices.ru/routes/cities?name=${route}`
+      )
+         .then((response) => response.json())
+         .then((data) => setCities(data));
    }, [route]);
 
-     /* Изменение данных в reducer */
-     const onHandleChangeDispatch = (id, city) => {
+   /* Изменение данных в reducer */
+   const onHandleChangeDispatch = (id, city) => {
       dispatch(
          searchHandleChange({
             name: direction,
@@ -53,8 +55,6 @@ export default function InputCities(props) {
       setTimeout(() => setVisible(false), 200);
    };
 
- 
-
    return (
       <>
          <input
@@ -66,7 +66,6 @@ export default function InputCities(props) {
             onBlur={onVisible}
             value={value}
             name={direction}
-            defaultValue="Initial text" 
          />
 
          {visible && cities.length > 0 ? (
