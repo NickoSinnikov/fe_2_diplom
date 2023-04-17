@@ -5,6 +5,7 @@ import SearchFormDirection from '../Forms/SearchFormDirection';
 import SearchFormDate from '../Forms/SearchFormDate';
 import Button from '../Button';
 import { fetchRoutes } from '../../Slice/routeSlice';
+import { filterChange } from '../../Slice/filterSlice';
 
 export default function HomePageForm() {
    const navigate = useNavigate();
@@ -12,8 +13,10 @@ export default function HomePageForm() {
 
    const handleSubmit = (event) => {
       event.preventDefault();
-      console.log('submit');
+      dispatch(filterChange({ name: 'offset', value: 0 }));
+
       dispatch(fetchRoutes());
+
       navigate('/tickets/train');
    };
 
@@ -35,9 +38,7 @@ export default function HomePageForm() {
                   <SearchFormDirection>Направление</SearchFormDirection>
                   <SearchFormDate>Дата</SearchFormDate>
                </div>
-               <Button  >
-                  Найти билеты
-               </Button>
+               <Button>Найти билеты</Button>
             </form>
          </div>
       </section>

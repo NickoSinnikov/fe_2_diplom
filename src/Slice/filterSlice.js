@@ -7,10 +7,10 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = JSON.parse(localStorage.getItem('filter')) || {
    have_first_class: false,
-   have_second_class: true,
-   have_third_class: true,
+   have_second_class: false,
+   have_third_class: false,
    have_fourth_class: false,
-   have_wifi: true,
+   have_wifi: false,
    have_express: false,
    have_air_conditioning: false,
 
@@ -29,7 +29,7 @@ const initialState = JSON.parse(localStorage.getItem('filter')) || {
    end_arrival_hour_from: 0,
    end_arrival_hour_to: 24,
 
-   limit: 5,
+   limit: 10,
    offset: 0,
    sort: 'date',
 };
