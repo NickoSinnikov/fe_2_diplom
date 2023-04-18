@@ -118,3 +118,20 @@
    border: 2px solid #c4c4c4;
    color: #928f94;
 }
+
+.sorting__block{
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+
+
+   font-size: 16px;
+}
+
+.sorting-list{
+   display: flex;
+}
+
+.sorting-item__quantity-tickets, .sorting-item{
+   display: flex;
+}

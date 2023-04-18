@@ -1,5 +1,7 @@
 /* eslint-disable react/self-closing-comp */
 import React from 'react';
+import firstRew from '../../img/FirstRew.png'
+import secondRew from '../../img/SecondRew.png'
 
 export default function Reviews() {
    return (
@@ -9,7 +11,7 @@ export default function Reviews() {
             <ul className="reviews">
                <li className="review">
                   <div className="review__image">
-                     <img src="" alt="alt"/>
+                     <img src={firstRew} alt="alt"/>
                   </div>
                   <div className="review__content">
                      <h4 className="review__author">Екатерина Вальнова</h4>
@@ -24,7 +26,7 @@ export default function Reviews() {
                </li>
                <li className="review">
                   <div className="review__image">
-                     <img src="" alt="alt"/>
+                     <img src={secondRew} alt="alt"/>
                   </div>
                   <div className="review__content">
                      <h4 className="review__author">Евгений Стрыкало</h4>

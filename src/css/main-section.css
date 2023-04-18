@@ -146,13 +146,15 @@
   min-width: 160px;
   height: 160px;
   border-radius: 50%;
-  border: solid 1px black;
+
   margin-right: 15px;
 }
 
 .review__image img {
   width: 100%;
   height: 100%;
+  border-radius: 50%;
+
 }
 
 .review__author {

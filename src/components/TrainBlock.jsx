@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Train from './traincard/Train';
 import { stageChange } from '../Slice/stageSlice';
 import Pagination from './traincard/Pagination';
+import Sorting from './traincard/Sorting';
 
 export default function TrainMainBlock() {
    const dispatch = useDispatch();
@@ -12,10 +13,12 @@ export default function TrainMainBlock() {
    useEffect(() => {
       dispatch(stageChange({ stage: 1 }));
    }, []);
-   console.log(trains);
+
    return (
       <div className="trains__block content__block">
-         <div className="trains__block-breadcrumbs"></div>
+         <div className="trains__block-breadcrumbs">
+            <Sorting />
+         </div>
          <ul className="train__block-list">
             {trains.map((train) => (
                <Train train={train} />
