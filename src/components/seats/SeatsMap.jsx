@@ -16,6 +16,7 @@ import {
   coachItemsSelect,
   coachItemsUnSelect,
   coachItemsClear,
+  // addDepartureCoachList
 } from "../../Slice/seatsSlice";
 
 import TicketTrain from "../traincard/TicketTrain";
@@ -25,16 +26,18 @@ import Coach from "./Coach";
 export default function SeatsMap({ type }) {
   
   const { train } = useSelector((state) => state.seats.train);
-  const { coachList, coachClass, coachItems } = useSelector(
-    (state) => state.seats[type]
-  );
- 
+  const { coachList, coachClass, coachItems } = useSelector((state) => state.seats[type]);
   const { passengersCount } = useSelector((state) => state.passengers);
+
+  const seats = useSelector((state)=>state.seats)
   const dispatch = useDispatch();
   const navigate = useNavigate();
+ console.log(seats)
+ console.log(coachClass)
 
   useEffect(() => {
     dispatch(coachItemsClear({ type }));
+    // dispatch(addDepartureCoachList())
   }, []);
 
   const available = {

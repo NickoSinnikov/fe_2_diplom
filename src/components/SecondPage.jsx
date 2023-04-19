@@ -18,6 +18,7 @@ import SearchFormDate from "./Forms/SearchFormDate";
 export default function SecondPage() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const status = useSelector((state)=>state.status)
   const onSubmit = (e) => {
     e.preventDefault();
     dispatch(fetchRoutes());
@@ -40,6 +41,7 @@ export default function SecondPage() {
           
         </div>
       </section>
+      
       <StageBar />
 
       <section className="container content__section">

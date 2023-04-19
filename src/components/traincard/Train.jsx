@@ -5,20 +5,21 @@ import { useNavigate } from 'react-router';
 import TrainCardDirection from './TrainCardDirection';
 import TrainCardType from './TrainCardType';
 import trainImg from '../../img/Train.svg';
-import { fetchSeats, trainAdd } from '../../Slice/seatsSlice';
+import { fetchSeats, trainAdd} from '../../Slice/seatsSlice';
 
 
-export default function Train(route, type) {
+export default function Train({train, type}) {
    const navigate = useNavigate();
    const dispatch = useDispatch();
-   const { train, option } = route;
    const { departure, arrival } = train;
 
    const handleClick = (e) => {
       e.preventDefault();
       dispatch(trainAdd(route));
+      
       dispatch(fetchSeats());
       navigate('/tickets/seats');
+      console.log(route)
    };
    return (
       <div className="train-card"
@@ -46,7 +47,9 @@ export default function Train(route, type) {
       train-card__main"
          >
             <ul className="train-card__directions">
-               <TrainCardDirection departure={departure} />
+               {departure && type!== "arrival"&&(<TrainCardDirection departure={departure} />) }
+               {arrival && type!== "departure" &&(<TrainCardDirection departure={arrival} />)}
+               
             </ul>
             <div className="train-card__type">
                <TrainCardType departure={departure} />

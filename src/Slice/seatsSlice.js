@@ -16,7 +16,7 @@ export const fetchSeats = createAsyncThunk(
 
       try {
          const response = await fetch(url);
-
+ 
          if (!response.ok) {
             throw new Error('Server Error');
          }
@@ -61,6 +61,12 @@ const seatsSlice = createSlice({
       trainClear: (state) => {
          state.train = null;
       },
+
+      // addDepartureCoachList:(state, action) => {
+
+      //    state.departure.coachList = action.payload;
+      //    localStorage.setItem("seat-departure")
+      // },
       coachClassChange: (state, action) => {
          const { coachClass, type } = action.payload;
          state[type].coachClass = coachClass;
@@ -148,5 +154,6 @@ export const {
    seatsItemSelect,
    serviceItemSelect,
    serviceItemUnSelect,
+   // addDepartureCoachList,
 } = seatsSlice.actions;
 export default seatsSlice.reducer;

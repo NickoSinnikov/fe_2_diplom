@@ -8,12 +8,11 @@ height: 100px;
 .ticket-train__item{
     display: flex;
     align-items: center;
+    border-right: 1px solid white;
 }
 .ticket-train__card__aside{
-    
     width: 25%;
-    justify-content: space-around;
-    
+    justify-content: space-evenly; 
 }
 
 .ticket-train__card-info{
@@ -24,11 +23,14 @@ height: 100px;
 .train__direction-info__time, .ticket-train__card__number{
     font-weight: bolder;
     font-size: 20px;
+    line-height: 28.13px
 }
+
 .ticket-train__item-time{
-    
     width: 25%;
-    justify-content: space-around;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
     
 }
 
@@ -44,4 +46,27 @@ height: 100px;
 
 .ticket-train__card__rote-text{
     text-transform: capitalize;
+}
+
+.ticket-train__img{
+    width: 25px;
+    height: 25px;
+    background-image: url("../img/Clock.svg");
+    background-position: center;
+    background-size: contain;
+
+    margin-right: 20px;
+}
+
+.ticket-train__arrow{
+    width: 30px;
+    height: 20px;
+    background-image: url("../img/AsideArrow.svg");
+    background-size: contain;
+    background-position: center;
+    margin: 0 0px 0 0px;
+}
+
+.ticket-train__arrow-arrival{
+    transform: rotate(180deg);
 }

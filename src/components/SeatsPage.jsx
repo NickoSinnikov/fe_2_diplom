@@ -10,16 +10,15 @@ export default function SeatsPage() {
   const navigate = useNavigate();
 
   const { train } = useSelector((state) => state.seats.train);
+  console.log(train);
   const seatsDeparture = useSelector(
     (state) => state.seats.departure.seatsCount
   );
   const seatsarrival = useSelector((state) => state.seats.arrival.seatsCount);
   const { passengersCount } = useSelector((state) => state.passengers);
-
   useEffect(() => {
     dispatch(passengersPriceClear());
-    dispatch(fetchSeats("departure"));
-    if (train.arrival) dispatch(fetchSeats("arrival"));
+    
   }, [dispatch]);
 
   const [disabled, setDisabled] = useState(true);
