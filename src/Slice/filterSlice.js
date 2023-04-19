@@ -11,7 +11,7 @@ const initialState = JSON.parse(localStorage.getItem('filter')) || {
    have_third_class: false,
    have_fourth_class: false,
    have_wifi: false,
-   have_express: false,
+   have_express: true,
    have_air_conditioning: false,
 
    price_from: 10,
@@ -29,7 +29,7 @@ const initialState = JSON.parse(localStorage.getItem('filter')) || {
    end_arrival_hour_from: 0,
    end_arrival_hour_to: 24,
 
-   limit: 10,
+   limit: 5,
    offset: 0,
    sort: 'date',
 };

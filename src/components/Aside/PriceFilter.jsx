@@ -12,7 +12,7 @@ export default function PriceFilter() {
 
    const minDistance = 10;
    const [value1, setValue1] = useState([price_from, price_to]);
-
+   console.log(price_from);
    const handleChange1 = (event, newValue, activeThumb) => {
       if (!Array.isArray(newValue)) {
          return;
