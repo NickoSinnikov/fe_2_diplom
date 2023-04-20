@@ -18,10 +18,10 @@ export default function Train(route, type) {
    const handleClick = (e) => {
       e.preventDefault();
       dispatch(trainAdd(route));
-      
+
       dispatch(fetchSeats());
       navigate('/tickets/seats');
-      
+
    };
    return (
       <div className="train-card"
@@ -49,9 +49,9 @@ export default function Train(route, type) {
       train-card__main"
          >
             <ul className="train-card__directions">
-               {departure && type!== "arrival"&&(<TrainCardDirection departure={departure} />) }
-               {arrival && type!== "departure" &&(<TrainCardDirection departure={arrival} />)}
-               
+               {departure && type!== "arrival"&&(<TrainCardDirection name={departure} />) }
+               {arrival && type!== "departure" &&(<TrainCardDirection name={arrival} />)}
+
             </ul>
             <div className="train-card__type">
                <TrainCardType departure={departure} />

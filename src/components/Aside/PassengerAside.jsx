@@ -66,7 +66,7 @@ export default function PassangerAside() {
                            .utc()
                            .format('HH:mm')}
                      </span>
-                     <span className="block-info-time-date">
+                     <span className="time-date">
                         {moment
                            .unix(departure.from.datetime)
                            .utc()
@@ -112,92 +112,98 @@ export default function PassangerAside() {
                </div>
             </div>
          </div>
-         <div className="aside-route-to aside-item aside__block">
-            <div className="aside__block-title ">
-               <img src={routeBack} alt="alt" />
-               <span>Обратно</span>
-               <span>
-                  {moment
-                     .unix(arrival.from.datetime)
-                     .utc()
-                     .format('DD.MM.YYYY')}
-               </span>
-               <button
-                  type="button"
-                  className={`aside-hidden__btn ${
-                     isHidden.arrival ? 'active-button' : 'inactive-button'
+         {arrival && (
+            <div className="aside-route-to aside-item aside__block">
+               <div className="aside__block-title ">
+                  <img src={routeBack} alt="alt" />
+                  <span>Обратно</span>
+                  <span>
+                     {moment
+                        .unix(arrival.from.datetime)
+                        .utc()
+                        .format('DD.MM.YYYY')}
+                  </span>
+                  <button
+                     type="button"
+                     className={`aside-hidden__btn ${
+                        isHidden.arrival ? 'active-button' : 'inactive-button'
+                     }`}
+                     onClick={() => onHidden('arrival')}
+                  ></button>
+               </div>
+               <div
+                  className={`aside__block-info ${
+                     isHidden.arrival ? 'hidden' : ''
                   }`}
-                  onClick={() => onHidden('arrival')}
-               ></button>
-            </div>
-            <div
-               className={`aside__block-info ${
-                  isHidden.arrival ? 'hidden' : ''
-               }`}
-            >
-               <div className="block-info-number block-info__item">
-                  <span>№ поезда</span>
-                  <span>{arrival.train.name}</span>
-               </div>
-               <div className="block-info-name block-info__item">
-                  <span>Название</span>
-                  <span>{arrival.train.name}</span>
-               </div>
-               <div className="block-info-time block-info__item">
-                  <div className="time-item time-item-to--arrival">
-                     <span className="block-info-time-time">
-                        {moment.unix(arrival.to.datetime).utc().format('HH:mm')}
-                     </span>
-                     <span className="time-date">
-                        {moment
-                           .unix(arrival.to.datetime)
-                           .utc()
-                           .format('DD.MM.YYYY')}
-                     </span>
+               >
+                  <div className="block-info-number block-info__item">
+                     <span>№ поезда</span>
+                     <span>{arrival.train.name}</span>
                   </div>
-                  <div className="block-info-arrow">
-                     <p className="block-info-inRoad">
-                        {moment.unix(arrival.duration).utc().format('HH:mm')}
-                     </p>
-                     <img
-                        className="aside-arrow--arrival"
-                        src={arrow}
-                        alt="arrow"
-                     />
+                  <div className="block-info-name block-info__item">
+                     <span>Название</span>
+                     <span>{arrival.train.name}</span>
                   </div>
-                  <div className="time-item time-item-from--arrival">
-                     <span className="block-info-time-time">
-                        {moment
-                           .unix(arrival.from.datetime)
-                           .utc()
-                           .format('HH:mm')}
-                     </span>
-                     <span className="time-date">
-                        {moment
-                           .unix(arrival.from.datetime)
-                           .utc()
-                           .format('DD.MM.YYYY')}
-                     </span>
+                  <div className="block-info-time block-info__item">
+                     <div className="time-item time-item-to--arrival">
+                        <span className="block-info-time-time">
+                           {moment
+                              .unix(arrival.to.datetime)
+                              .utc()
+                              .format('HH:mm')}
+                        </span>
+                        <span className="time-date">
+                           {moment
+                              .unix(arrival.to.datetime)
+                              .utc()
+                              .format('DD.MM.YYYY')}
+                        </span>
+                     </div>
+                     <div className="block-info-arrow">
+                        <p className="block-info-inRoad">
+                           {moment.unix(arrival.duration).utc().format('HH:mm')}
+                        </p>
+                        <img
+                           className="aside-arrow--arrival"
+                           src={arrow}
+                           alt="arrow"
+                        />
+                     </div>
+                     <div className="time-item time-item-from--arrival">
+                        <span className="block-info-time-time">
+                           {moment
+                              .unix(arrival.from.datetime)
+                              .utc()
+                              .format('HH:mm')}
+                        </span>
+                        <span className="time-date">
+                           {moment
+                              .unix(arrival.from.datetime)
+                              .utc()
+                              .format('DD.MM.YYYY')}
+                        </span>
+                     </div>
                   </div>
-               </div>
-               <div className="block-info-city">
-                  <div className="info-city-to--arrival info-city-to ">
-                     <span>{arrival.to.city.name}</span>
-                     <span className="fs14">
-                        {arrival.to.railway_station_name}
-                     </span>
-                     <span className="fs14">вокзал</span>
-                  </div>
-                  <div className="info-city-from--arrival info-city-from ">
-                     <span>{arrival.from.city.name}</span>
-                     <span className="fs14">
-                        {arrival.from.railway_station_name}
-                     </span>
-                     <span className="fs14">вокзал</span>
+                  <div className="block-info-city">
+                     <div className="info-city-to--arrival info-city-to ">
+                        <span>{arrival.to.city.name}</span>
+                        <span className="fs14">
+                           {arrival.to.railway_station_name}
+                        </span>
+                        <span className="fs14">вокзал</span>
+                     </div>
+                     <div className="info-city-from--arrival info-city-from ">
+                        <span>{arrival.from.city.name}</span>
+                        <span className="fs14">
+                           {arrival.from.railway_station_name}
+                        </span>
+                        <span className="fs14">вокзал</span>
+                     </div>
                   </div>
                </div>
             </div>
-         </div>
+         )}
+
          <div className="aside-item aside__block">
             <div className="aside__block-title aside-item-passengers">
                <img src={people} alt="people" />

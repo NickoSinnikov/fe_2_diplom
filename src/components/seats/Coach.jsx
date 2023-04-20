@@ -11,6 +11,7 @@ import KupeClass from './coach-classes/Kupe';
 import PlatskartClass from './coach-classes/Platskart';
 import SeatsClass from './coach-classes/Seats';
 import Price from './Price';
+import Services from './Services';
 
 export default function Coach({ coach, seatsList, typeTicket }) {
    const { seats, services } = useSelector((state) => state.seats[typeTicket]);
@@ -195,21 +196,25 @@ export default function Coach({ coach, seatsList, typeTicket }) {
             <div className="coach-info-card coach-info-card--services">
                <h5 className="coach-info-title">Обслуживание ФПК</h5>
                <div className="coach-services">
-                  {/* {coach.have_air_conditioning && (
-                    <Service service="air" id={coach._id} type={typeTicket} />
+                  {coach.have_air_conditioning && (
+                     <Services service="air" id={coach._id} type={typeTicket} />
                   )}
                   {coach.have_wifi && (
-                    <Service service="wifi" id={coach._id} type={typeTicket} />
+                     <Services
+                        service="wifi"
+                        id={coach._id}
+                        type={typeTicket}
+                     />
                   )}
                   {coach.linens_price !== 0 && (
-                     <Service
+                     <Services
                         service="linens"
                         id={coach._id}
                         disabled={coach.is_linens_included}
                         type={typeTicket}
                      />
                   )}
-                  <Service service="food" id={coach._id} type={typeTicket} /> */}
+                  <Services service="food" id={coach._id} type={typeTicket} />
                </div>
             </div>
          </div>

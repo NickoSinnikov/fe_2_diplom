@@ -119,19 +119,50 @@
    color: #928f94;
 }
 
-.sorting__block{
+.sorting__block {
    width: 100%;
    display: flex;
    justify-content: space-between;
-
-
+   margin-bottom: 30px;
    font-size: 16px;
 }
 
-.sorting-list{
+.sorting-list {
    display: flex;
 }
-
-.sorting-item__quantity-tickets, .sorting-item{
+.sorting-item:first-child {
+   margin-right: 20px;
+}
+.sorting-item__quantity-tickets,
+.sorting-item {
    display: flex;
+}
+.sorting-item__quantity-tickets {
+   padding-left: 10px;
+}
+.quantity-value {
+   margin-right: 10px;
+   cursor: pointer;
+}
+
+.quantity-value-active {
+   color: #ffa800;
+}
+
+.sort-name {
+   color: #928f94;
+}
+
+.select__wrapper {
+   border: none;
+}
+
+.sorting__select {
+   appearance: none;
+   -moz-appearance: none;
+   -webkit-appearance: none;
+   border: none;
+   background-color: inherit;
+   padding: 0 10px 0 10px;
+   outline: none;
 }

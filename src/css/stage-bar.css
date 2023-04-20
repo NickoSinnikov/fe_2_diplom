@@ -1,60 +1,59 @@
 .stageBar {
-  z-index: -1;
-  position: relative;
+   z-index: 0;
+   position: relative;
 }
 
 .stageBar-gray {
-  background: #3e3c41;
+   background: #3e3c41;
 }
 .stageBar-yellow {
-  background: #ffa800;
+   background: #ffa800;
 }
 
 .stageBar_list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  height: 60px;
-  position: relative;
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   height: 60px;
+   position: relative;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
+   display: flex;
+   justify-content: space-between;
+   align-items: stretch;
 
-  margin-right: auto;
-  margin-left: auto;
+   margin-right: auto;
+   margin-left: auto;
 }
 
 .stageBar_list::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 3000px;
-  left: -3000px;
-  background: #ffa800;
+   content: '';
+   position: absolute;
+   height: 100%;
+   width: 3000px;
+   left: -3000px;
+   background: #ffa800;
 }
 
-
 .stageBar_list-item {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 98px;
-  flex-grow: 1;
-  text-align: start;
-  background: #3e3c41;
-  color: #ffffff;
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding-left: 60px;
-  width: 100px;
+   font-weight: 700;
+   font-size: 20px;
+   line-height: 98px;
+   flex-grow: 1;
+   text-align: start;
+   background: #3e3c41;
+   color: #ffffff;
+   position: relative;
+   display: flex;
+   align-items: center;
+   padding-left: 60px;
+   width: 100px;
 }
 
 .stageBar_list-item:first-child {
-  padding-left: 0;
+   padding-left: 0;
 }
 
- /* .activ::before {
+/* .activ::before {
   z-index: 3;
   content: "";
   position: absolute;
@@ -69,42 +68,42 @@
 }  */
 
 .passed {
-  background: #ffa800;
+   background: #ffa800;
 }
 
 .stageBar_list-icon {
-  box-sizing: border-box;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 56px;
-  height: 56px;
-  padding: 10px;
-  margin-right: 28px;
-  border: 4px solid #fff;
-  border-radius: 50%;
+   box-sizing: border-box;
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 56px;
+   height: 56px;
+   padding: 10px;
+   margin-right: 28px;
+   border: 4px solid #fff;
+   border-radius: 50%;
 }
 
 .stageBar_list-stage {
-  display: inline-block;
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 42px;
+   display: inline-block;
+   font-size: 36px;
+   font-weight: 700;
+   line-height: 42px;
 }
 
 .stages_wrapper {
-  margin-left: auto;
-  margin-right: auto;
+   margin-left: auto;
+   margin-right: auto;
 }
 
 .stageBar_list-item:not(:first-child)::after {
-  z-index: 99;
-  height: 97px;
-  width: 37px;
-  content: "";
-  position: absolute;
-  /* background-image: url(../../img/form/vector.svg); */
-  left: -2px;
-  top: 0px;
+   z-index: 99;
+   height: 97px;
+   width: 37px;
+   content: '';
+   position: absolute;
+   /* background-image: url(../../img/form/vector.svg); */
+   left: -2px;
+   top: 0px;
 }

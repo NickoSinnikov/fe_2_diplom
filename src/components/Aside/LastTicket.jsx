@@ -1,7 +1,7 @@
 /* eslint-disable  react/prop-types */
 import React from 'react';
-import rub from '../../img/Rub.svg'
-import Price from '../seats/Price'
+import rub from '../../img/Rub.svg';
+import Price from '../seats/Price';
 
 export default function LastTicket({ ticket }) {
    return (
@@ -27,43 +27,13 @@ export default function LastTicket({ ticket }) {
             </div>
          </div>
          <div className="last-ticket__info">
-            {/* <div className="last_ticket-options">
-               {ticket.departure.have_wifi && (
-                  <img
-                     className="last_ticket-options-icon"
-                     src={wifi}
-                     alt="wi-fi"
-                  />
-               )}
-               {ticket.departure.is_express && (
-                  <img
-                     className="last_ticket-options-icon"
-                     src={express}
-                     alt="express"
-                  />
-               )}
-               {ticket.departure.have_air_conditioning && (
-                  <img
-                     className="last_ticket-options-icon"
-                     src={conditioning}
-                     alt="conditioning"
-                  />
-               )}
-
-               <img
-                  className="last_ticket-options-icon"
-                  src={food}
-                  alt="food"
-               />
-            </div> */}
-
             <div className="last-ticket__price-range">
                <span className="last_ticket-price">
-                  от 
+                  от{' '}
                   <Price
                      title="last-ticket__price"
                      value={ticket.departure.min_price}
-                  />  
+                  />{' '}
                   <img className="last-ticket__сurrency" src={rub} alt="руб." />
                </span>
             </div>

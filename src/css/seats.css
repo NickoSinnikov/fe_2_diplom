@@ -136,6 +136,9 @@
    margin-bottom: 30px;
 }
 
+.ticket_class {
+   margin-bottom: 30px;
+}
 .ticket_title {
    font-weight: 700;
    font-size: 30px;
@@ -363,6 +366,11 @@
    line-height: 21px;
    color: #928f94;
    margin-bottom: 0;
+
+   font-size: 16px;
+}
+.coach-info-title span {
+   font-weight: bold;
 }
 
 .coach-ticket-сurrency {
@@ -374,7 +382,7 @@
 }
 
 .coach-info-text {
-   font-size: 16px;
+   font-size: 20px;
    font-weight: bold;
 }
 .coach-info-text:last-child {
@@ -404,64 +412,65 @@
    background-color: #ffa800;
 }
 
-.service--active {
+.service-active {
    border-color: #fdb935;
    background-color: #fdb935;
 }
 
 .service:disabled {
+   cursor: auto;
    border-color: #fcdc9d;
    background-color: #fcdc9d;
 }
 
-/* .air-service {
-   background-image: url('../../../img/tickets/options/air-service.svg');
+.air__item {
+   background-image: url('../img/Cond-black.svg');
 }
 
-.air-service:disabled {
-   background-image: url('../../../img/tickets/options/air-service-disable.svg');
-}
-
-.air-service--active {
-   background-image: url('../../../img/tickets/options/air-service-active.svg');
-}
-
-.wifi-service {
-   background-image: url('../../../img/tickets/options/wifi-service.svg');
-}
-
-.wifi-service:disabled {
-   background-image: url('../../../img/tickets/options/wifi-service-disable.svg');
-}
-
-.wifi-service--active {
-   background-image: url('../../../img/tickets/options/wifi-service-active.svg');
-}
-
-.linens-service {
-   background-image: url('../../../img/tickets/options/linen-service.svg');
-}
-
-.linens-service:disabled {
-   background-image: url('../../../img/tickets/options/linen-service-disable.svg');
-}
-
-.linens-service--active {
-   background-image: url('../../../img/tickets/options/linen-service-active.svg');
-}
-
-.food-service {
-   background-image: url('../../../img/tickets/options/food-service.svg');
-}
-
-.food-service:disabled {
-   background-image: url('../../../img/tickets/options/food-service-disable.svg');
-}
-
-.food-service--active {
-   background-image: url('../../../img/tickets/options/food-service-active.svg');
+/* .air-service:disabled {
+   background-image: url('../img/Conditioner-sqr.svg');
 } */
-.coach,
+
+.air__item-active {
+   background-image: url('../img/Con-active.svg');
+}
+
+.wifi__item {
+   background-image: url('../img/Wifi-black.svg');
+}
+
+/* .wifi-service:disabled {
+   background-image: url('../../../img/tickets/options/wifi-service-disable.svg');
+} */
+
+.wifi__item-active {
+   background-image: url('../img/Wifi-active.svg');
+}
+
+.linens__item {
+   background-image: url('../img/Lines-black.svg');
+}
+
+/* .linens-service:disabled {
+   background-image: url('../../../img/tickets/options/linen-service-disable.svg');
+} */
+
+.linens__item-active {
+   background-image: url('../img/Lines-active.svg');
+}
+
+.food__item {
+   background-image: url('../img/Eat-black.svg');
+}
+
+/* .food-service:disabled {
+   background-image: url('../../../img/tickets/options/food-service-disable.svg');
+} */
+
+.food__item-active {
+   background-image: url('../img/Eat-active.svg');
+}
+*/ .coach,
 .coach-inner {
    width: 100%;
 }
