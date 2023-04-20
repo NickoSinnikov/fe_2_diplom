@@ -1,4 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router';
@@ -8,18 +9,19 @@ import trainImg from '../../img/Train.svg';
 import { fetchSeats, trainAdd} from '../../Slice/seatsSlice';
 
 
-export default function Train({train, type}) {
+export default function Train(route, type) {
    const navigate = useNavigate();
    const dispatch = useDispatch();
+   const {train} = route;
    const { departure, arrival } = train;
-
+   console.log(train)
    const handleClick = (e) => {
       e.preventDefault();
       dispatch(trainAdd(route));
       
       dispatch(fetchSeats());
       navigate('/tickets/seats');
-      console.log(route)
+      
    };
    return (
       <div className="train-card"

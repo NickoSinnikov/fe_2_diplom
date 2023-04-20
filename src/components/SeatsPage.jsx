@@ -18,7 +18,8 @@ export default function SeatsPage() {
   const { passengersCount } = useSelector((state) => state.passengers);
   useEffect(() => {
     dispatch(passengersPriceClear());
-    
+    dispatch(fetchSeats('departure'));
+      if (train.arrival) dispatch(fetchSeats('arrival'));
   }, [dispatch]);
 
   const [disabled, setDisabled] = useState(true);

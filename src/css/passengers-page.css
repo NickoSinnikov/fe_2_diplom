@@ -74,7 +74,7 @@
     background: #f9f9f9;
 
     display: flex;
-    align-items: center;
+    align-items: baseline;
  }
 
 
@@ -97,21 +97,19 @@
     left: -66px;
     background-repeat: no-repeat;
  }
- /* .hide {
-    background-image: url('../../../img/form/hide-button.svg');
+  .hide {
+   
+    background-image: url('../img/Minus-circle.svg');
  }
  .show {
-    background-image: url('../../../img/form/open-button.svg');
- } */
+    background-image: url('../img/Plus_circle.svg');
+ } 
 
  .passenger_delete-button {
-    margin-left: auto;
-    margin-right: 40px;
-    width: 12px;
-    height: 12px;
-    border: 0;
-
-    /* background-image: url('../../../img/form/delete-button.svg'); */
+    width: 15px;
+    height: 15px;
+    border: 0; 
+    background-image: url('../img/Cross-grey.svg');
     background-color: transparent;
     background-repeat: no-repeat;
  }

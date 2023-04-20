@@ -97,7 +97,7 @@ export default function PassengerForm({ number, type }) {
           />
           Пассажир {number}
         </h4>
-        <button type="button" className="passenger_delete-button" />
+        <button type="button" className="passenger_delete-button"/>
       </div>
 
       <div

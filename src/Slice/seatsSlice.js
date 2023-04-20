@@ -11,7 +11,7 @@ export const fetchSeats = createAsyncThunk(
       // const { filter } = getState();
 
       const { train } = getState().seats.train;
-      const id = train.departure._id;
+      const id = train[type]._id;
       const url = `https://netology-trainbooking.netoservices.ru/routes/${id}/seats`;
 
       try {
