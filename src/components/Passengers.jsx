@@ -38,9 +38,10 @@ export default function Passengers() {
               Найти билеты
             </Button>
           </form>
-          <StageBar />
+          
         </div>
       </section>
+      <StageBar />
       <div className="container content__section">
         <PassengerAside />
         <Routes>

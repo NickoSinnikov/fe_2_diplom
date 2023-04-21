@@ -12,9 +12,9 @@ import { fetchSeats, trainAdd} from '../../Slice/seatsSlice';
 export default function Train(route, type) {
    const navigate = useNavigate();
    const dispatch = useDispatch();
-   const {train} = route;
+   const {train, option} = route;
    const { departure, arrival } = train;
-   console.log(train)
+   
    const handleClick = (e) => {
       e.preventDefault();
       dispatch(trainAdd(route));
@@ -24,7 +24,7 @@ export default function Train(route, type) {
 
    };
    return (
-      <div className="train-card"
+      <div className={`train-card ${option === "verification" ? "train-card-verification" : "" }`}
       >
          <div className="train-card__aside">
             <div className="train-card__image">

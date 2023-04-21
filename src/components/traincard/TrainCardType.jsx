@@ -45,7 +45,7 @@ export default function TrainCardType({ departure }) {
                         </span>
                      </p>
                   </li>
-                  <div className="train-seats__drop train-seats__drop-hidden"/>
+                  <div className="train-seats__drop train-seats__drop-hidden" />
                </>
             )}
             {departure.available_seats_info.second && (
@@ -55,15 +55,15 @@ export default function TrainCardType({ departure }) {
                      {departure.available_seats_info.second}
                   </p>
                   <p className="train-seats__price">
-                     от{' '}
+                     <span>{'от '}</span>
                      <span className="train-seats__price-text">
-                        {departure.price_info.second.bottom_price}{' '}
-                        <img
-                           className="train-seats__price-img"
-                           src={rub}
-                           alt="руб"
-                        />
+                        {departure.price_info.first.price}
                      </span>
+                     <img
+                        className="train-seats__price-img"
+                        src={rub}
+                        alt="руб"
+                     />
                   </p>
                </li>
             )}
@@ -74,15 +74,15 @@ export default function TrainCardType({ departure }) {
                      {departure.available_seats_info.first}
                   </p>
                   <p className="train-seats__price">
-                     от{' '}
+                     <span>{'  '}</span>
                      <span className="train-seats__price-text">
-                        {departure.price_info.first.price}{' '}
-                        <img
-                           className="train-seats__price-img"
-                           src={rub}
-                           alt="руб"
-                        />
+                        {departure.price_info.first.price}
                      </span>
+                     <img
+                        className="train-seats__price-img"
+                        src={rub}
+                        alt="руб"
+                     />
                   </p>
                </li>
             )}

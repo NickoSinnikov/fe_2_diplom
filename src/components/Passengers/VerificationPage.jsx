@@ -54,7 +54,7 @@ export default function Verification() {
             {passengers.map((el) => (
               <div className="passenger_card" key={nanoid()}>
                 <div className="passenger_card-header">
-                  {/* <img src={passenger} alt="passenger" /> */}
+                  <div className="passenger_card-img"/>
                   <h5 className="passenger_card-title">
                     {el.type === "adult" ? "Взрослый" : "Детский"}
                   </h5>

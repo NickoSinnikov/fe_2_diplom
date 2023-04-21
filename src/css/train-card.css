@@ -175,3 +175,9 @@
 .train-service__item-wifi {
    background-image: url('../img/WiFi.svg');
 }
+
+
+.train-seats__price{
+   display: flex;
+   justify-content: flex-end;
+}
