@@ -36,7 +36,7 @@ export default function TrainCardType({ departure }) {
                      <p className="train-seats__price">
                         от{' '}
                         <span className="train-seats__price-text">
-                           {departure.price_info.third.side_price}{' '}
+                           {departure.price_info.third.side_price}
                         </span>
                         <img
                            className="train-seats__price-img"
@@ -74,7 +74,7 @@ export default function TrainCardType({ departure }) {
                      {departure.available_seats_info.first}
                   </p>
                   <p className="train-seats__price">
-                     <span>{'  '}</span>
+                     от{' '}
                      <span className="train-seats__price-text">
                         {departure.price_info.first.price}
                      </span>

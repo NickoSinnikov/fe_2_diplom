@@ -59,9 +59,13 @@ export default function Train(route, type) {
                <button
                   type="button"
                   onClick={handleClick}
-                  className="train-card__btn"
+                  className={`train-card__btn ${
+                     option === 'verification'
+                        ? 'train-card__btn-verificaation'
+                        : ''
+                  } `}
                >
-                  Выбрать места
+                  {option === 'verification' ? 'Изменить' : 'Выбрать места'}
                </button>
             </div>
          </div>
