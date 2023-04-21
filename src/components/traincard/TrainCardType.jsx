@@ -17,12 +17,12 @@ export default function TrainCardType({ departure }) {
                      от{' '}
                      <span className="train-seats__price-text">
                         {departure.price_info.fourth.bottom_price}{' '}
-                        <img
-                           className="train-seats__price-img"
-                           src={rub}
-                           alt="руб"
-                        />
                      </span>
+                     <img
+                        className="train-seats__price-img"
+                        src={rub}
+                        alt="руб"
+                     />
                   </p>
                </li>
             )}
@@ -37,12 +37,12 @@ export default function TrainCardType({ departure }) {
                         от{' '}
                         <span className="train-seats__price-text">
                            {departure.price_info.third.side_price}{' '}
-                           <img
-                              className="train-seats__price-img"
-                              src={rub}
-                              alt="руб"
-                           />
                         </span>
+                        <img
+                           className="train-seats__price-img"
+                           src={rub}
+                           alt="руб"
+                        />
                      </p>
                   </li>
                   <div className="train-seats__drop train-seats__drop-hidden" />
@@ -54,17 +54,17 @@ export default function TrainCardType({ departure }) {
                   <p className="train-seats__count">
                      {departure.available_seats_info.second}
                   </p>
-                  <p className="train-seats__price">
-                     <span>{'от '}</span>
+                  <span className="train-seats__price">
+                     от{' '}
                      <span className="train-seats__price-text">
-                        {departure.price_info.first.price}
+                        {departure.price_info.second.bottom_price}
                      </span>
                      <img
                         className="train-seats__price-img"
                         src={rub}
                         alt="руб"
                      />
-                  </p>
+                  </span>
                </li>
             )}
             {departure.available_seats_info.first && (
