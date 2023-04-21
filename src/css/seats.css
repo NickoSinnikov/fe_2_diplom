@@ -470,7 +470,7 @@
 .food__item-active {
    background-image: url('../img/Eat-active.svg');
 }
-*/ .coach,
+ .coach,
 .coach-inner {
    width: 100%;
 }
