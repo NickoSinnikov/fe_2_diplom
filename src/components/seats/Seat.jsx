@@ -30,7 +30,7 @@ export default function Seat({
          style.top = '52px';
       }
    } else if (type === 'bottom') {
-      style.top = '95px';
+      style.top = '97px';
    } else if (type === 'lux') {
       style.top = '24px';
    } else if (number < 33) {
