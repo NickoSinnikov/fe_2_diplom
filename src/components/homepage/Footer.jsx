@@ -1,5 +1,6 @@
 /* eslint-disable react/self-closing-comp */
-import React from 'react';
+/* eslint-disable jsx-a11y/anchor-has-content */
+import React, { useState } from 'react';
 import Logo from './Logo';
 import fb from '../../img/fb.svg';
 import tw from '../../img/tw.svg';
@@ -8,6 +9,26 @@ import google from '../../img/google.svg';
 import youtube from '../../img/youtube.svg';
 
 export default function Footer() {
+   function validateEmail(email) {
+      const re =
+         /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+      return re.test(String(email).toLowerCase());
+   }
+   const [emailSubscribe, setEmail] = useState('');
+   const onSubscribe = (e) => {
+      e.preventDefault();
+      if (validateEmail(emailSubscribe)) {
+         fetch(
+            `https://netology-trainbooking.netoservices.ru/subscribe?email=${emailSubscribe}`
+         )
+            .then((response) => response.json())
+            .then((data) => console.log(data));
+      }
+   };
+   const onSetEmail = (event) => {
+      const { value } = event.target;
+      setEmail(value);
+   };
    return (
       <footer className="footer">
          <div className="container footer__container">
@@ -40,37 +61,39 @@ export default function Footer() {
                   <h4 className="footer__title">Подписка</h4>
                   <form className="subscribe__form">
                      <label>Будьте в курсе событий</label>
-                     <input className="subscribe__input" placeholder="e-mail" />
-                     <button type="button" className="subscribe__btn">
+                     <input
+                        className="subscribe__input"
+                        placeholder="e-mail"
+                        type="email"
+                        id="subscription"
+                        value={emailSubscribe}
+                        onChange={onSetEmail}
+                     />
+                     <button
+                        type="button"
+                        className="subscribe__btn"
+                        id="button"
+                        onClick={onSubscribe}
+                     >
                         Отправить
                      </button>
                   </form>
                   <h4 className="footer__title">Подписывайся на нас</h4>
                   <ul className="socials">
                      <li className="social youtube">
-                        <a href="#" className="social-link">
-
-                        </a>
+                        <a href="#" className="social-link" />
                      </li>
                      <li className="social in">
-                        <a href="#" className="social-link">
-
-                        </a>
+                        <a href="#" className="social-link" />
                      </li>
                      <li className="social google">
-                        <a href="#" className="social-link">
-
-                        </a>
+                        <a href="#" className="social-link" />
                      </li>
                      <li className="social facebook">
-                        <a href="#" className="social-link">
-
-                        </a>
+                        <a href="#" className="social-link" />
                      </li>
                      <li className="social twitter">
-                        <a href="#" className="social-link">
-                           
-                        </a>
+                        <a href="#" className="social-link" />
                      </li>
                   </ul>
                </div>

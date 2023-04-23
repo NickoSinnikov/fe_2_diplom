@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable prefer-template */
+/* eslint-disable no-useless-return */
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { searchHandleChange } from '../../Slice/SearchSlice';
@@ -13,7 +14,7 @@ export default function InputCities(props) {
    const dispatch = useDispatch();
    const { routeFrom, routeTo } = useSelector((state) => state.search);
    const route = direction === 'routeFrom' ? routeFrom.city : routeTo.city;
-   const [value, setValue] = useState(route);
+   const [value, setValue] = useState('');
    const [cities, setCities] = useState(route);
    /* При вводе города отправляем на запрос на сервер для получения списка городов */
 
@@ -42,11 +43,13 @@ export default function InputCities(props) {
    const handleChange = (event) => {
       const { target } = event;
       setValue(target.value);
-      const citiObj =
-         cities &&
-         cities.find((city) => city.name === target.value.toLowerCase());
-      const id = citiObj ? citiObj._id : '';
-      onHandleChangeDispatch(id, target.value);
+      if (target.value.length > 0) {
+         const citiObj =
+            cities &&
+            cities.find((city) => city.name === target.value.toLowerCase());
+         const id = citiObj ? citiObj._id : '';
+         onHandleChangeDispatch(id, target.value);
+      }
    };
 
    /* Скрытие выпадающего списка городов */

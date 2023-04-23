@@ -398,7 +398,7 @@
    height: 34.11px;
    border: 1px solid #292929;
    border-radius: 5px;
-
+position: relative;
    background-color: transparent;
    background-position: center;
    background-repeat: no-repeat;
@@ -421,6 +421,15 @@
    cursor: auto;
    border-color: #fcdc9d;
    background-color: #fcdc9d;
+}
+
+.services-help-hidden{
+   opacity: 0;
+   position: absolute;
+   top: 100%;
+   padding: 5px;
+   border: 1px solid grey;
+   font-size: 14px;
 }
 
 .air__item {
@@ -625,3 +634,4 @@
    background: #928f94;
    color: #ffffff;
 }
+

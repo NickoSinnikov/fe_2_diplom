@@ -1,5 +1,5 @@
 .stageBar {
-   z-index: 0;
+   z-index: 10;
    position: relative;
 }
 
@@ -107,3 +107,11 @@
    left: -2px;
    top: 0px;
 }
+.stageBar_list-item:last-child::after{
+   content: '';
+   position: absolute;
+   height: 100%;
+   width: 1000px;
+   left: 278px;
+   background: inherit;
+} ;

@@ -25,6 +25,8 @@ export default function Services({ service, type, id, disabled }) {
          }`}
          onClick={handleClick}
          disabled={disabled}
-      />
+      >
+         <span className="services-help-hidden">{service}</span>
+      </button>
    );
 }

@@ -99,13 +99,15 @@ export default function PayForm() {
                   >
                      Контактный телефон
                      <input
-                        className="pay-form_field pay-form_field-contact"
+                        className="pay-form_field pay-form_field-tel"
                         id="phone"
                         name="phone"
                         type="tel"
                         placeholder="+7 ___ ___ __ __"
                         value={form.phone}
                         onChange={handleChange}
+                        // maxLength="11"
+                        pattern="[\d]{1} ([\d]{2,3}) [\d]{2,3}[\d]{2,3}[\d]{2,3}"
                      />
                   </label>
                   <label

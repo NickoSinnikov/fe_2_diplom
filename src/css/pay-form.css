@@ -179,3 +179,15 @@
    background: #928f94;
    color: #ffffff;
 }
+
+.pay-form_field-tel:not(:focus){
+   border:black 1px solid;
+}
+.pay-form_field-tel:invalid{
+   border: red 1px solid;
+}
+
+.pay-form_field-tel:valid{
+border: green 1px solid;
+
+}
