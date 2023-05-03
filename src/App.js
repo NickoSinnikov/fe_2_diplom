@@ -1,9 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css';
-import './css/header.css';
+import 'normalize.css';
+import './css/main.scss';
+import './css/Header.scss';
 import './css/main-section.css';
-import './css/footer.css';
+import './css/Footer.scss';
 import './css/search-form.css';
 import './css/train-card.css';
 import './css/seats.css';

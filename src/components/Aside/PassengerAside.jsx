@@ -1,6 +1,5 @@
 /* eslint-disable react/self-closing-comp */
 import React, { useState } from 'react';
-import '../../css/aside.css';
 import { useSelector } from 'react-redux';
 import moment from 'moment/moment';
 import arrow from '../../img/AsideArrow.svg';

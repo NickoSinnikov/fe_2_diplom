@@ -60,15 +60,18 @@ export default function Footer() {
                <div className="footer__subscribe">
                   <h4 className="footer__title">Подписка</h4>
                   <form className="subscribe__form">
-                     <label>Будьте в курсе событий</label>
-                     <input
-                        className="subscribe__input"
-                        placeholder="e-mail"
-                        type="email"
-                        id="subscription"
-                        value={emailSubscribe}
-                        onChange={onSetEmail}
-                     />
+                     <div>
+                        <label>Будьте в курсе событий</label>
+                        <input
+                           className="subscribe__input"
+                           placeholder="e-mail"
+                           type="email"
+                           id="subscription"
+                           value={emailSubscribe}
+                           onChange={onSetEmail}
+                        />
+                     </div>
+
                      <button
                         type="button"
                         className="subscribe__btn"

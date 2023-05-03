@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../css/aside.css';
+import './Aside.scss';
 import DataFilter from './DataFilter';
 import OptionsFilter from './OptionsFilter';
 import PriceFilter from './PriceFilter';

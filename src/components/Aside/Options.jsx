@@ -20,7 +20,7 @@ export default function Options(props) {
          <div className="options-filter__icon">
             <img className="options-filter__image " src={src} alt="img" />
          </div>
-         <p className="options-filter__title">{props.children}</p>
+         <span className="options-filter__title">{props.children}</span>
          <Switch onChange={handleChange} checked={filter[name]} id={name} />
       </li>
    );
