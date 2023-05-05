@@ -1,11 +1,12 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router';
-import SearchFormDirection from '../Forms/SearchFormDirection';
-import SearchFormDate from '../Forms/SearchFormDate';
-import Button from '../Button';
+import SearchFormDirection from './SearchFormDirection';
+import SearchFormDate from './SearchFormDate';
+import Button from './Button';
 import { fetchRoutes } from '../../Slice/routeSlice';
 import { filterChange } from '../../Slice/filterSlice';
+import './Search-form.scss';
 
 export default function HomePageForm() {
    const navigate = useNavigate();

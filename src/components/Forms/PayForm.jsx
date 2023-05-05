@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router';
 import { addPayerData } from '../../Slice/paySlice';
 import { stageChange } from '../../Slice/stageSlice';
+import './Pay-form.scss';
 
 export default function PayForm() {
    const dispatch = useDispatch();

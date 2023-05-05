@@ -9,7 +9,7 @@ import {
 import PassengerPage from "./Passengers/PassengersPage";
 import SearchFormDirection from "./Forms/SearchFormDirection";
 import SearchFormDate from "./Forms/SearchFormDate";
-import Button from "./Button";
+import Button from "./Forms/Button";
 import { fetchRoutes } from "../Slice/routeSlice";
 import PayForm from "./Forms/PayForm";
 import VerificationPage from "./Passengers/VerificationPage";

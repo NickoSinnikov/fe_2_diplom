@@ -10,7 +10,7 @@ import TrainBlock from './TrainBlock';
 import SeatsPage from './SeatsPage';
 import StageBar from './StageBar';
 import Aside from './Aside/Aside';
-import Button from './Button';
+import Button from './Forms/Button';
 import { fetchRoutes } from '../Slice/routeSlice';
 import SearchFormDirection from './Forms/SearchFormDirection';
 import SearchFormDate from './Forms/SearchFormDate';
