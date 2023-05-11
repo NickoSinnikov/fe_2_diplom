@@ -1,8 +1,8 @@
 import React from 'react';
-import About from './homepage/About';
-import Faq from './homepage/Faq';
-import Reviews from './homepage/Reviews';
-import HomePageForm from './homepage/HomePageForm';
+import About from './About';
+import Faq from './Faq';
+import Reviews from './Reviews';
+import HomePageForm from '../Forms/HomePageForm';
 import './First-page.scss';
 
 export default function HomePage() {
