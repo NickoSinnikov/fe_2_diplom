@@ -6,7 +6,7 @@ import rub from '../img/Rub.svg';
 import sendTickets from '../img/success-img1.svg';
 import printTickets from '../img/success-img2.svg';
 import conductor from '../img/success-img3.svg';
-import star from '../img/Star.svg';
+import Stars from './Stars';
 import Price from './seats/Price';
 
 export default function SuccessBooking() {
@@ -126,31 +126,7 @@ export default function SuccessBooking() {
                         Оценить сервис
                      </p>
                      <div className="success-booking_footer-icons">
-                        <img
-                           className="success-booking_footer-icon"
-                           src={star}
-                           alt="Оценить сервис"
-                        />
-                        <img
-                           className="success-booking_footer-icon"
-                           src={star}
-                           alt="Оценить сервис"
-                        />
-                        <img
-                           className="success-booking_footer-icon"
-                           src={star}
-                           alt="Оценить сервис"
-                        />
-                        <img
-                           className="success-booking_footer-icon"
-                           src={star}
-                           alt="Оценить сервис"
-                        />
-                        <img
-                           className="success-booking_footer-icon"
-                           src={star}
-                           alt="Оценить сервис"
-                        />
+                        <Stars />
                      </div>
                   </div>
                   <button
